@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="banner">
+    <div class="container">
+        <div class="card border-0 bg-purple">
+            <img src="{% static '/images/banner_1.png' %}" class="img-fluid" alt="">
+            <div class="card-img-overlay p-3 p-lg-5">
+                <div class="row h-100">
+                    <div class="col-8 col-xl-6 d-flex flex-column justify-content-center">
+                        <h1 class="text-white mb-0 mb-xl-4 ml-3 ml-xl-5">
+                            Дарим
+                            возможность
+                            слышать
+                        </h1>
+                        <h3 class="text-white mb-xl-4 ml-3 ml-xl-5">
+                            Ваш проводник в мир <br/> хорошего слуха!
+                        </h3>
+                        <p class="mb-xl-4 ml-3 ml-xl-5 mt-3 mt-xl-4">
+                            <a href="#target" class="btn btn-outline-light">
+                                Записаться на приём
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-5">
+    <div class="container">
+        <h2 class="m-0 py-5">Что вас ждёт в центре хорошего слуха</h2>
+        <div class="row">
+            <div class="col-12 col-xl-6 mb-4-5">
+                <div class="card card-success active card-effect">
+                    <div class="card-body">
+                        <img src="{% static 'images/comment.svg' %}" alt="">
+                        <h4 class="mb-3 mt-5 position-relative">
+                            Бесплатный тест слуха
+                        </h4>
+                        <p>
+                            Бесплатная проверка слуха перед покупкой слухового аппарата. Вы узнаете, как слышите звуки
+                            разной громкости и частоты, а главное — как это влияет на качество вашей жизни.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6 mb-4-5">
+                <div class="card card-primary card-effect">
+                    <div class="card-body">
+                        <img src="{% static 'images/user.svg' %}" alt="">
+                        <h4 class="mb-3 mt-5 position-relative">
+                            Слуховые аппараты для каждого
+                        </h4>
+                        <p>
+                            Предлагаем модели аппаратов на разные потребности
+                            и бюджет. При выборе мы ориентируемся не только
+                            на состояние слуха, но и на личные предпочтения, образ жизни.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6 mb-4-5">
+                <div class="card card-danger card-effect">
+                    <div class="card-body">
+                        <img src="{% static 'images/heart.svg' %}" alt="">
+                        <h4 class="mb-3 mt-5 position-relative">
+                            Обслуживание и поддержка
+                        </h4>
+                        <p>
+                            После покупки слухового аппарата специалисты остаются с вами на связи, чтобы в любой момент
+                            помочь. На каждый аппарат распространяются условия гарантии.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6 mb-4-5">
+                <div class="card card-purple card-effect">
+                    <div class="card-body">
+                        <img src="{% static 'images/home.svg' %}" alt="">
+                        <h4 class="mb-3 mt-5 position-relative">
+                            Уютный центр
+                        </h4>
+                        <p>
+                            Путь к хорошему слуху должен быть комфортным, именно поэтому в наших кабинетах мы создали
+                            светлую и просторную обстановку. Никаких очередей и долгого ожидания приёма.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-5">
+    <div class="container">
+        <div class="card card-box-shadow">
+            <div class="card-body">
+                <h2>
+                    Слуховые аппараты для любого слуха
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-xl-3 product border-right">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="{% static 'images/products/product_1.png' %}" class="img-fluid" alt="">
+                        </div>
+                        <h4 class="my-4">
+                            Заушные
+                        </h4>
+                        <p class="text-muted">
+                            Классические модели аппаратов. Миниатюрный размер, максимум возможностей
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 product border-right">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="{% static 'images/products/product_2.png' %}" class="img-fluid" alt="">
+                        </div>
+                        <h4 class="my-4">
+                            Внутриушные
+                        </h4>
+                        <p class="text-muted">
+                            Полностью незаметные аппараты, о них будете знать только вы
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 product border-right">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="{% static 'images/products/product_3.png' %}" class="img-fluid" alt="">
+                        </div>
+                        <h4 class="my-4">
+                            Перезаряжаемые
+                        </h4>
+                        <p class="text-muted">
+                            Те, кому не нужны
+                            батарейки
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 product border-right">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="{% static 'images/products/product_4.png' %}" class="img-fluid" alt="">
+                        </div>
+                        <h4 class="my-4">
+                            iPhone и Android
+                        </h4>
+                        <p class="text-muted">
+                            Модели с подключением
+                            к смартфону управляются через фирменное приложение
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5 how-buy">
+    <div class="container">
+        <div class="card card-box-shadow">
+            <div class="card-body">
+                <h2>
+                    Как купить слуховой аппарат
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-xl-4">
+                    <div class="card-body">
+                        <div class="text-center position-relative">
+                            <img src="{% static 'images/service/service_1.png' %}" class="img-fluid" alt="">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <span>01</span>
+                            </div>
+                        </div>
+                        <h4 class="my-4 px-3">
+                            Запишитесь на приём
+                        </h4>
+                        <p class="text-muted px-3">
+                            Задать вопросы и записаться на приём можно на сайте, по телефону или WhatsApp.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-xl-4">
+                    <div class="card-body">
+                        <div class="text-center position-relative">
+                            <img src="{% static 'images/service/service_2.png' %}" class="img-fluid" alt="">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <span>02</span>
+                            </div>
+                        </div>
+                        <h4 class="my-4 px-3">
+                            Получите консультацию
+                        </h4>
+                        <p class="text-muted px-3">
+                            Проведём тестирование слуха
+                            и дадим свои рекомендации. На приёме можно опробовать разные модели аппаратов: специалист поможет сделать лучший выбор, основываясь на ваших пожеланиях.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-xl-4">
+                    <div class="card-body">
+                        <div class="text-center position-relative">
+                            <img src="{% static 'images/service/service_3.png' %}" class="img-fluid" alt="">
+                            <div class="card-img-overlay d-flex align-items-end">
+                                <span>03</span>
+                            </div>
+                        </div>
+                        <h4 class="my-4 px-3">
+                            Оплатите покупку
+                        </h4>
+                        <p class="text-muted px-3">
+                            На каждое устройство распространяется сервисное обслуживание: техническая поддержка, диагностика, при необходимости — ремонт.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="target" class="mb-5 contacts">
+    <div class="container">
+        <div class="bg-effect">
+            <div class="row justify-content-between align-items-end">
+                <div class="col-12 mb-5 mb-xl-0 col-xl-6">
+                    <h1 class="text-white">
+                        Запись <br/>
+                        на приём
+                    </h1>
+                    <p class="f-25 text-white w-75 mt-4">
+                        После отправки формы
+                        с вами свяжется наш специалист и подтвердит запись
+                    </p>
+                </div>
+                <div class="col-12 mb-5 mb-xl-0 col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="name">Имя</label>
+                                    <input id="name" name="name" type="text" class="form-control" placeholder="Введите Имя">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input id="phone" name="phone" type="tel" class="form-control" placeholder="Введите Телефон" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">Текст</label>
+                                    <input id='text' name="message" type="text" class="form-control" placeholder="Введите текст">
+                                </div>
+                                <div class="form-group mt-4 pt-3">
+                                    <button type="submit" class="btn btn-success btn-block">
+                                        Записаться на приём
+                                    </button>
+                                </div>
+                                <p class="small text-center">
+                                    Отправляя данные, вы даёте согласие
+                                    на
+                                    <a href="#" class="text-success">обработку ваших персональных данных</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="map">
+    <div class="container">
+        <div class="bg-effect">
+            <div class="row justify-content-between align-items-end">
+                <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
+                <div class="mb-4 mb-xl-0 col-12 col-xl-4">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="small mb-3">Адрес</div>
+                                <p class="mb-4">
+                                    Ташкент, Яккасарайский район, улица Бабура 40 В
+                                </p>
+                                <div class="small mb-3">Часы работы</div>
+                                <div>
+                                   <strong>Пн.–Пт.</strong> с 9:00 до 17:00
+                                </div>
+                                <div>
+                                   <strong>Сб.</strong> с 9:00 до 14:00
+                                </div>
+                                <div class="mb-4">
+                                   <strong>Вс.</strong> — выходной
+                                </div>
+                                <div class="small mb-3">Телефон</div>
+                                <div class="d-flex">
+                                    <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
+                                    <a href="tel:+998998404536" class="text-body">(+998 99) 840-45-36</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mt-4">
+    <div class="container">
+        <div class="border-bottom py-5 px-3" style="border-color:#D7D7D7!important;">
+            <div class="row align-items-center">
+                <div class="col-12 mb-3 mb-xl-0 col-md-12 col-xl-4">
+                    <ul class="nav justify-content-center justify-content-lg-start">
+                        <li class="mr-2 nav-item">
+                            <a href="https://www.facebook.com/radugazvukovuz/?ref=page_internal">
+                                <img src="{% static 'images/facebook.png' %}" width="24" height="24" alt="">
+                            </a>
+                        </li>
+                        <li class="mr-2 nav-item">
+                            <a href="https://www.instagram.com/radugazvukovuz/">
+                                <img src="{% static 'images/instagram.png' %}" width="24" height="24" alt="">
+                            </a>
+                        </li>
+                        <li class="mr-2 nav-item">
+                            <a href="https://t.me/radugazvukovuz">
+                                <img src="{% static 'images/Telegram.svg' %}" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 col-xl-4 text-center">
+                    <div class="d-flex">
+                        <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
+                        <a href="tel:+998998404536" class="text-body">
+                            <strong>
+                                (+998 99) 840-45-36
+                            </strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-xl-4 text-right">
+                    <a href="#target" class="btn btn-outline-dark">
+                        Мы вам перезвоним!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

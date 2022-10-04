@@ -1,0 +1,324 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<nav class="bg-white">
+    <div class="modal fade bd-example-modal-lg" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content p-5">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="text-info mb-4 font-weight-bold">Слуховые аппараты</p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">Исток-Аудио</a>
+                                </li>
+                                <li>
+                                    <a href="#">Phonak</a>
+                                </li>
+                                <li>
+                                    <a href="#">Заушные</a>
+                                </li>
+                                <li>
+                                    <a href="#">Недорогие</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аналоговые</a>
+                                </li>
+                                <li>
+                                    <a href="#">Цифровые</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-info mb-4 font-weight-bold">
+                                Аксессуары
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Батарейки</a></li>
+                                <li><a href="#">Вкладыши</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="bg-white border-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-5">
+                <img src="{% static 'images/products/product_8.png' %}" class="img-fluid" alt="Слуховой аппарат Siya 2 BTE 13 PP">
+            </div>
+            <div class="col-12 col-xl-7 py-4 d-flex flex-column justify-content-around">
+                <h4 class="mb-4">
+                    Слуховой аппарат Багира Pro-01
+                </h4>
+                <p class="text-muted mb-4 f-18">
+                    16-канальный цифровой слуховой аппарат с программируемой мощностью. Используется для компенсации потерь слуха от умеренной до средне-тяжелой степени.
+                </p>
+                <ul class="text-muted f-18">
+                    <li>Шумоподавление</li>
+                    <li>Подавление обратной связи</li>
+                    <li>Нанопокрытие</li>
+                    <li>Влагозащищенность</li>
+                </ul>
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <p class="text-info f-22 mb-0">
+                            34 900 руб.
+                        </p>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-info py-2 px-5" data-toggle="modal" data-target="#modalCall">
+                            <span class="px-3">Заказать</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-5 bg-white pb-5">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-12 col-xl-6">
+                <h4 class="f-28 mb-4">Описание модели</h4>
+                <p class="f-18">
+                    Багира Pro-01 – серия цифровых программируемых многоканальных слуховых аппаратов с программируемой мощностью и функцией анализа окружающей обстановки. Благодаря плавающей матрице Багира Pro-01 способен скорректировать любую степень потери слуха.
+                    Уникальная гибкость настройки обеспечивается возможностью использования от 1 до 16 каналов цифровой обработки сигнала.
+                    Автоматическая программа гарантирует работу аппарата в 12-ти акустических ситуациях.
+                </p>
+            </div>
+            <div class="col-12 col-xl-6">
+                <h4 class="f-28 mb-4">Дополнительно</h4>
+                <p>
+                    Брошюра по уходу за слуховым аппаратом:
+                </p>
+                <div>
+                    <img src="{% static 'images/icons/adobe.svg' %}" alt="">
+                </div>
+                <div class="py-3">
+                    <a href="#" class="text-info">Скачать</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <div class="card shadow-none card-info mb-4">
+                    <div class="card-header">
+                        Все характеристики модели
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-6 py-3">
+                                Производитель:
+                            </div>
+                            <div class="col-6 px-4 py-3">
+                                Исток Аудио
+                            </div>
+
+                            <div class="col-6 py-3">
+                                Тип корпуса:
+                            </div>
+                            <div class="col-6 px-4 py-3">
+                                Заушный
+                            </div>
+
+                            <div class="col-6 py-3">
+                                Уровень мощности:
+                            </div>
+                            <div class="col-6 px-4 py-3">
+                                Мощный
+                            </div>
+
+                            <div class="col-6 py-3">
+                                Тип обработки сигнала:
+                            </div>
+                            <div class="col-6 px-4 py-3">
+                                Цифровой
+                            </div>
+
+                            <div class="col-6 py-3">
+                                Количество каналов:
+                            </div>
+                            <div class="col-6 px-4 py-3">
+                                16
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li class="font-weight-bold">Подавление шума LX</li>
+                    <li class="font-weight-bold">Многополосная адаптивная направленность LX</li>
+                    <li class="font-weight-bold">Широкополосная компрессия LX</li>
+                    <li class="font-weight-bold">Частотный диапазон, доступный для регулировки усиления при настройке – 8 кГц.</li>
+                    <li class="font-weight-bold">Каналы обработки звука – 48.</li>
+                    <li class="font-weight-bold">Усиление басов (стриминг)</li>
+                    <li class="font-weight-bold">Feedback shield LX</li>
+                    <li class="font-weight-bold">Подавление шума ветра</li>
+                    <li class="font-weight-bold">Полосы настройки – 8.</li>
+                    <li class="font-weight-bold">Регулятор привыкания</li>
+                    <li class="font-weight-bold">Oticon Firmware Updater</li>
+                    <li class="font-weight-bold">Различные режимы направленности</li>
+                    <li>
+                        <p class="mb-0 font-weight-bold">Возможности подключения:</p>
+                            <p class="mb-0">Стереопередача (2.4 ГГц).</p>
+                            <p class="mb-0">Приложение Oticon ON.</p>
+                            <p class="mb-0">ConnectClip.</p>
+                            <p class="mb-0">Пульт ДУ Remote Control 3.0.</p>
+                            <p class="mb-0">ТВ Адаптер 3.0.</p>
+                            <p class="mb-0">AI/FM</p>
+                    </li>
+                    <li class="font-weight-bold">Технология Tinnitus SoundSupport.</li>
+                    <li class="font-weight-bold">Двойная кнопка-переключатель.</li>
+                    <li class="font-weight-bold">Встроенная телекатушка.</li>
+                    <li class="font-weight-bold">Нанопокрытие.</li>
+                    <li class="font-weight-bold">Влагозащищенность – индекс защиты IP68.</li>
+                    <li class="font-weight-bold">Размер батареи – 13</li>
+                </ul>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="card shadow-none card-info mb-4">
+                    <div class="card-header">
+                        Функции
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">
+                                <div>
+                                    Шумоподавление
+                                </div>
+                                <div>
+                                    <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">
+                                <div>
+                                    Подавление обратной связи
+                                </div>
+                                <div>
+                                    <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">
+                                </div>
+                            </div>
+                            <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">
+                                <div>
+                                    Влагозащищенность
+                                </div>
+                                <div>
+                                    <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">
+                                </div>
+                            </div>
+
+                            <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">
+                                <div>
+                                    Нанопокрытие
+                                </div>
+                                <div>
+                                    <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="f-28 mb-4">
+                    Отзывы
+                </h4>
+                <div class="border-bottom mb-4">
+                    <p>Siya 2 BTE 13 PP</p>
+                    <p class="text-muted">
+                        Считаю, что на слуховом аппарате экономить нельзя. Это же мои вторые уши. Только работающие!
+                        Поэтому я придирчиво подбирал новую модель, взамен старым. Выбирал из линейки датской компании
+                        Отикон, так как уже убедился в их качестве и надежности. Модель Siya 2 BTE 13 PP меня полностью
+                        устроила по цене и по возможностям.
+                        Это цифровой слуховой аппарат, очень мощный и достаточно функциональный. По крайней мере, для
+                        меня в нем есть все, что надо. Надеюсь, что прослужит как можно дольше.
+                    </p>
+                    <p class="text-muted">
+                        28.02.2022
+                    </p>
+                </div>
+                <div class="border-bottom mb-4">
+                    <p>Благодарность коллективу «Радуги звуков» и лично Татьяне Александровне</p>
+                    <p class="text-muted">
+                        Я, Куликова Раиса Алексеевна, и мой муж, Куделькин Анатолий Павлович, выражаем глубокую
+                        благодарность коллективу «Радуги звуков» и лично Татьяне Александровне за безупречное, грамотное
+                        обслуживание, за доброжелательное, теплое отношение к пациентам.
+                    </p>
+                    <p class="text-muted">
+                        30.11.2021
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5 product-cards">
+    <div class="container">
+        <h2 class="mb-0 py-4">
+            С этим товаром покупают
+        </h2>
+        <div class="row">
+            <div class="col-12 col-md-6 col-xl-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="{% static 'images/products/product_12.png' %}" class="img-fluid"
+                                 alt="TV Adapter 3.0 Oticon">
+                        </div>
+                        <h4 class="my-4 f-22">
+                            TV Adapter 3.0 Oticon
+                        </h4>
+                        <p class="text-info f-22 mb-0">
+                            26 300 руб
+                        </p>
+                        <p class="text-muted mb-4">
+                            В наличии
+                        </p>
+                        <a href="#" class="btn btn-outline-dark btn-block">
+                            Заказать
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="{% static 'images/products/product_13.png' %}" class="img-fluid"
+                                 alt="Remote Control 3.0 Oticon">
+                        </div>
+                        <h4 class="my-4 f-22">
+                            Remote Control 3.0 Oticon
+                        </h4>
+                        <p class="text-info f-22 mb-0">
+                            35 900 руб.
+                        </p>
+                        <p class="text-muted mb-4">
+                            В наличии
+                        </p>
+                        <a href="#" class="btn btn-outline-dark btn-block">
+                            Заказать
+                        </a>
+                    </div>
+                    <div class="card-img-overlay">
+                        <span class="btn btn-outline-info btn-sm">
+                            Новинка
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock content %}
+
+
+{% include "include/footer.html" %}

@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="mb-5 banner">
+  <div class="container">
+    <div class="card border-0 bg-info">
+      <img src="{% static 'images/banner_3.png' %}" class="img-fluid" alt="">
+      <div class="card-img-overlay p-5">
+        <div class="row h-100">
+          <div class="col-6 d-flex flex-column justify-content-center">
+            <h1 class="text-white ml-5">
+              Ваш слух —
+            </h1>
+            <h1 class="text-white mb-4 ml-5">
+              наша забота
+            </h1>
+            <p class="text-white mb-4 ml-5 f-18">
+              Центр «Радуги звуков» — не просто магазин, где можно купить слуховой аппарат. Мы сопровождаем
+              и заботимся о слухе человека на протяжении жизни: отслеживаем изменения, подбираем новые решения
+              и при первой необходимости корректируем их работу.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mb-5">
+  <div class="container">
+    <h2 class="mb-0 py-5">
+      Что получают клиенты «Радуги звуков»
+    </h2>
+    <div class="card mb-5">
+      <div class="row align-items-center">
+        <div class="col-7">
+          <div class="card-body col-10">
+            <h2 class="mb-4 f-32 pl-5">
+              Помощь и консультации
+            </h2>
+            <p class=" f-18 pl-5">
+              Наши специалисты отвечают на вопросы о слухе
+              и слуховых аппаратах по телефону, электронной
+              почте, WhatsApp или на сайте.
+            </p>
+          </div>
+        </div>
+        <div class="col-5">
+          <img src="{% static 'images/service_page/service_1.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="card mb-5">
+      <div class="row align-items-center flex-row-reverse">
+        <div class="col-7">
+          <div class="card-body col-10">
+            <h2 class="mb-4 pl-5 f-32">
+              Техническая поддержка
+            </h2>
+            <p class=" f-18 pl-5">
+              Помогаем с диагностикой и ремонтом, пока вы пользуетесь нашими слуховыми аппаратами
+              и аксессуарами. На каждое устройство распространяется условия гарантийного и постгарантийного обслуживания.
+            </p>
+          </div>
+        </div>
+        <div class="col-5">
+          <img src="{% static 'images/service_page/service_2.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="card mb-5">
+      <div class="row align-items-center">
+        <div class="col-7">
+          <div class="card-body">
+            <h2 class="f-32 mb-4 pl-5">
+              Программирование слухового аппарата
+            </h2>
+            <p class=" f-18 pl-5">
+              При необходимости в нашем центре можно проверить
+              и обновить настройки слухового аппарата.
+              Столько раз, сколько потребуется.
+            </p>
+          </div>
+        </div>
+        <div class="col-5">
+          <img src="{% static 'images/service_page/service_3.png' %}" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+<!--    <div class="card mb-5">-->
+<!--      <div class="row align-items-center flex-row-reverse">-->
+<!--        <div class="col-7">-->
+<!--          <div class="card-body col-10">-->
+<!--            <h2 class="mb-4 f-32 pl-5">-->
+<!--              Изготовление вкладышей-->
+<!--            </h2>-->
+<!--            <p class=" f-18 pl-5">-->
+<!--              Индивидуальные вкладыши для слуховых аппаратов изготавливаются по слепку уха на 3D-принтере.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-5">-->
+<!--          <img src="images/service_page/service_4.png" class="img-fluid" alt="">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="card mb-5">-->
+<!--      <div class="row align-items-center">-->
+<!--        <div class="col-7">-->
+<!--          <div class="card-body col-10">-->
+<!--            <h2 class="mb-4 f-32 pl-5">-->
+<!--              Аксессуары-->
+<!--            </h2>-->
+<!--            <p class=" f-18 pl-5">-->
+<!--              Батарейки, вкладыши, средства для ухода, беспроводные аксессуары для подключения к смартфону, планшету или телевизору.-->
+<!--            </p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-5">-->
+<!--          <img src="images/service_page/service_5.png" class="img-fluid" alt="">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+</section>
+
+<section class="mb-5 contacts">
+  <div class="container">
+    <div class="bg-effect">
+      <div class="row justify-content-between align-items-end">
+        <div class="col-12 mb-5 mb-xl-0 col-xl-6">
+          <h1 class="text-white">
+            Запись <br/>
+            на приём
+          </h1>
+          <p class="f-25 text-white w-75 mt-4">
+            После отправки формы
+            с вами свяжется наш специалист и подтвердит запись
+          </p>
+        </div>
+        <div class="col-12 mb-5 mb-xl-0 col-xl-4">
+          <div class="card">
+            <div class="card-body">
+              <form method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="name">Имя</label>
+                                    <input id="name" name="name" type="text" class="form-control" placeholder="Введите Имя">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input id="phone" name="phone" type="tel" class="form-control" placeholder="Введите Телефон">
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">Текст</label>
+                                    <input id='text' name="message" type="text" class="form-control" placeholder="Введите текст">
+                                </div>
+                                <div class="form-group mt-4 pt-3">
+                                    <button type="submit" class="btn btn-success btn-block">
+                                        Записаться на приём
+                                    </button>
+                                </div>
+                                <p class="small text-center">
+                                    Отправляя данные, вы даёте согласие
+                                    на
+                                    <a href="#" class="text-success">обработку ваших персональных данных</a>
+                                </p>
+                            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="map">
+  <div class="container">
+    <div class="bg-effect">
+      <div class="row justify-content-between align-items-end">
+        <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
+        <div class="mb-4 mb-xl-0 col-12 col-xl-4">
+          <div class="">
+            <div class="card">
+              <div class="card-body">
+                <div class="small mb-3">Адрес</div>
+                <p class="mb-4">
+                  Ташкент, Яккасарайский район, улица Бабура 40 В
+                </p>
+                <div class="small mb-3">Часы работы</div>
+                <div>
+                  <strong>Пн.–Пт.</strong> с 9:00 до 17:00
+                </div>
+                <div>
+                  <strong>Сб.</strong> с 9:00 до 14:00
+                </div>
+                <div class="mb-4">
+                  <strong>Вс.</strong> — выходной
+                </div>
+                <div class="small mb-3">Телефон</div>
+                <div class="d-flex">
+                  <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
+                  <a href="tel:+998998404536" class="text-body">(+998 99) 840-45-36</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="mt-4">
+  <div class="container">
+    <div class="border-bottom py-5 px-3" style="border-color:#D7D7D7!important;">
+      <div class="row align-items-center">
+        <div class="col-12 mb-3 mb-xl-0 col-md-12 col-xl-4">
+          <ul class="nav justify-content-center justify-content-lg-start">
+            <li class="mr-2 nav-item">
+              <a href="https://www.facebook.com/radugazvukovuz/?ref=page_internal">
+                <img src="{% static 'images/facebook.png' %}" width="24" height="24" alt="">
+              </a>
+            </li>
+            <li class="mr-2 nav-item">
+              <a href="https://www.instagram.com/radugazvukovuz/">
+                <img src="{% static 'images/instagram.png' %}" width="24" height="24" alt="">
+              </a>
+            </li>
+            <li class="mr-2 nav-item">
+              <a href="https://t.me/radugazvukovuz">
+                <img src="{% static 'images/Telegram.svg' %}" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-6 col-xl-4 text-center">
+          <div class="d-flex">
+            <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
+            <a href="tel:+998998404536" class="text-body">
+              <strong>
+                (+998 99) 840-45-36
+              </strong>
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-xl-4 text-right">
+          <a href="#" class="btn btn-outline-dark">
+            Мы вам перезвоним!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
