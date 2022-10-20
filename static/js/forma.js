@@ -1,5 +1,3 @@
-
-
 $(document).ready(()=>{
     const timeOut = setTimeout(()=>{
         $('#loader').addClass('loader-hide');

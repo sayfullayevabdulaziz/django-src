@@ -5,9 +5,7 @@
     --success: #1A8725;
     --muted: rgba(0, 0, 0, 0.4);
     --info: #077BCD;
-}
-.target {
-  scroll-behavior: smooth;
+    --border: #dee2e6;
 }
 body{
     font-family: Inter, sans-serif;
@@ -534,6 +532,9 @@ nav .modal .list-unstyled a:hover{
     top: 25px;
     border-radius: 15px;
 }
+.image-mix-blend {
+    mix-blend-mode: multiply;
+}
 @keyframes loader-circle {
     0%{
         transform: scale(0)  translate(-50%,-50%);
@@ -665,4 +666,102 @@ nav .modal .list-unstyled a:hover{
     .dropdown .btn img{
         width: 25px;
     }
+}
+.catalog-list {
+    margin: 0;
+    padding: 0;
+}
+.catalog-list li {
+    list-style-type: none;
+}
+.catalog-list li span {
+    color: #6c757d ;
+}
+.gap-2 {
+    gap: 24px;
+}
+.mo-card-group {
+    border: 1px solid;
+    border-color: var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.mo-card {
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+}
+.mo-card:last-child {
+    border-bottom: none;
+}
+.mo-card-header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.mo-card-header h4 {
+    margin-bottom: 0;
+    line-height: 1;
+}
+.mo-card-header button {
+    border: none;
+    background-color: transparent;
+}
+.mo-card-header-button-line {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.mo-card-header-button-line:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background-color: black;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.mo-card-header-button-line:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background-color: black;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 300ms;
+}
+.mo-active.mo-card-header-button-line:after {
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.mo-card-body {
+    padding: 20px 0 0;
+    display: none;
+}
+.mo-visible.mo-card-body {
+    display: block !important;
+}
+.mo-nav-modal {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    max-width: 660px;
+    width: 100%;
+    transition: 400ms;
+    height: 0;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    padding: 24px;
+    z-index: -2000;
+}
+.mo-modal-visible.mo-nav-modal {
+    top: 50%;
+    z-index: 2000;
+    height: 400px;
 }

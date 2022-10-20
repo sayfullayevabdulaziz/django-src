@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Что получают клиенты «Радуги звуков»</title>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/cssmain.css' %}" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
         .active .nav-link {
             color: rgb(0 0 0 / 40%) !important;
+        }
+        .mo-nav-modal{
+            opacity: 0;
+        }
+        .mo-modal-visible.mo-nav-modal {
+            opacity: 1;
         }
     </style>
 </head>
@@ -76,17 +82,15 @@
                     <li class="nav-item {% if request.path == '/' %}active{% else %}{% endif %} mr-0 mr-lg-3 mr-xl-5">
                         <a href="{% url 'index' %}" class="nav-link">О нас</a>
                     </li>
-                    <li class="nav-item {% if request.path == '/catalog/' %}active{% else %}{% endif %} mr-0 mr-lg-3 mr-xl-5">
-                        <a href="{% url 'catalog' %}" class="nav-link">Каталог</a>
+                    <li class="nav-item mr-0 mr-lg-3 mr-xl-5">
+                        <button type="button" data-toggle="modal" data-target="#aboutUsModal"
+                                class="nav-link btn-unstyled">Каталог
+                        </button>
                     </li>
                     <li class="nav-item {% if request.path == '/service/' %}active{% else %}{% endif %} mr-0 mr-lg-3 mr-xl-5">
                         <a href="{% url 'service' %}" class="nav-link">Услуги</a>
                     </li>
-                    <li class="nav-item mr-0 mr-lg-3 mr-xl-5">
-                        <button type="button" data-toggle="modal" data-target="#aboutUsModal"
-                                class="nav-link btn-unstyled">О слуховых аппаратах
-                        </button>
-                    </li>
+
                     <li class="nav-item {% if request.path == '/center/' %}active{% else %}{% endif %} ">
                         <a href="{% url 'center' %}" class="nav-link">Наш центр</a>
                     </li>
@@ -94,14 +98,92 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bd-example-modal-lg" id="aboutUsModal" tabindex="-1" role="dialog"
+    <div class="modal fade bd-example-modal-lg" id="aboutUsModal_1" tabindex="-1" role="dialog"
          aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content p-5">
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-6">
-                            <p class="text-info mb-4 font-weight-bold">Слуховые аппараты</p>
+                            <a href="#" style="cursor: pointer !important;" class="text-info mb-4 font-weight-bold">Слуховые аппараты111111</a>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">Исток-Аудио</a>
+                                </li>
+                                <li>
+                                    <a href="#">Phonak</a>
+                                </li>
+                                <li>
+                                    <a href="#">Заушные</a>
+                                </li>
+                                <li>
+                                    <a href="#">Недорогие</a>
+                                </li>
+                                <li>
+                                    <a href="#">Аналоговые</a>
+                                </li>
+                                <li>
+                                    <a href="#">Цифровые</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-info mb-4 font-weight-bold">
+                                Аксессуары
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Батарейки</a></li>
+                                <li><a href="#">Вкладыши</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mo-nav-modal">
+        <div class="row">
+            <div class="col-6">
+                <p class="text-info mb-4 font-weight-bold">Слуховые аппараты</p>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Исток-Аудио</a>
+                    </li>
+                    <li>
+                        <a href="#">Phonak</a>
+                    </li>
+                    <li>
+                        <a href="#">Заушные</a>
+                    </li>
+                    <li>
+                        <a href="#">Недорогие</a>
+                    </li>
+                    <li>
+                        <a href="#">Аналоговые</a>
+                    </li>
+                    <li>
+                        <a href="#">Цифровые</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <p class="text-info mb-4 font-weight-bold">
+                    Аксессуары
+                </p>
+                <ul class="list-unstyled">
+                    <li><a href="#">Батарейки</a></li>
+                    <li><a href="#">Вкладыши</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content p-5">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="{% url 'catalog' %}" class="text-info mb-4 d-block font-weight-bold">Слуховые аппараты</a>
                             <ul class="list-unstyled">
                                 <li>
                                     <a href="#">Исток-Аудио</a>
@@ -153,15 +235,13 @@
             <li class="nav-item {% if request.path == '/' %}active{% else %}{% endif %} mr-5 ml-auto">
                 <a href="{% url 'index' %}" class="nav-link text-body">О нас</a>
             </li>
-            <li class="nav-item {% if request.path == '/catalog/' %}active{% else %}{% endif %} mr-5">
-                <a href="{% url 'catalog' %}" class="nav-link text-body">Каталог</a>
+            <li class="nav-item mr-5">
+                <a href="#" class="nav-link text-body">Каталог</a>
             </li>
             <li class="nav-item {% if request.path == '/service/' %}active{% else %}{% endif %} mr-5">
                 <a href="{% url 'service' %}" class="nav-link text-body">Услуги</a>
             </li>
-            <li class="nav-item mr-5">
-                <a href="#" class="nav-link text-body">О слуховых аппаратах</a>
-            </li>
+
             <li class="nav-item {% if request.path == '/center/' %}active{% else %}{% endif %}">
                 <a href="{% url 'center' %}" class="nav-link text-body">Наш центр</a>
             </li>
@@ -220,7 +300,20 @@
 <script src="{% static 'js/popper.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/forma.js' %}"></script>
+<script src="{% static 'js/acardion.js' %}"></script>
 
+<script>
+    const moNavModal = document.querySelector('.mo-nav-modal');
+    const modalMouseOver = e => {
+        moNavModal.classList.add('mo-modal-visible');
+    }
+    window.addEventListener('click', e => {
+        const TARGET = e.target;
+        if (!TARGET.closest('.mo-nav-modal')) {
+            moNavModal.classList.remove('mo-modal-visible');
+        }
+    })
+</script>
 
 </body>
 </html>
