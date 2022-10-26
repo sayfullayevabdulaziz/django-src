@@ -48,7 +48,7 @@ def ProductPageView(request):
 
 
 
-def CatalogPageView(request):
+def CatalogPageViewIstok(request):
 	if request.method == 'POST':
 		name = request.POST.get('name', None)
 		phone = request.POST.get('phone', None)
@@ -57,7 +57,20 @@ def CatalogPageView(request):
 
 	return render(
 	request=request,
-	template_name = 'catalog.html')
+	template_name = 'catalog-istok.html')
+
+
+
+def CatalogPageViewPhonak(request):
+	if request.method == 'POST':
+		name = request.POST.get('name', None)
+		phone = request.POST.get('phone', None)
+		message = request.POST.get('message', None)
+		telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
+
+	return render(
+	request=request,
+	template_name = 'catalog-phonak.html')
 
 
 def ServisePageView(request):

@@ -9,6 +9,7 @@ urlpatterns = [
 	path('center/', CenterPageView, name='center'),
 	path('product/', ProductPageView, name='product'),
 	path('service/', ServisePageView, name='service'),
-	path('catalog/', CatalogPageView, name='catalog'),
+	path('catalog/phonak', CatalogPageViewPhonak, name='catalog-phonak'),
+	path('catalog/istok-audio', CatalogPageViewIstok, name='catalog-istok'),
 				
 ]
