@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import requests
-
+from .models import Product
 
 
 def telegram_bot_sendtext(bot_message):
@@ -35,7 +35,10 @@ def CenterPageView(request):
 
 
 
-def ProductPageView(request):
+def ProductPageView(request, slug):
+
+	product = Product.objects.get(slug=slug)
+
 	if request.method == 'POST':
 		name = request.POST.get('name', None)
 		phone = request.POST.get('phone', None)
@@ -43,34 +46,31 @@ def ProductPageView(request):
 		telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
 
 	return render(
-	request=request,
-	template_name ='product.html')
+			request=request,
+			template_name='product.html',
+			context={'product': product}
+		)
 
 
 
-def CatalogPageViewIstok(request):
+def CatalogPageView(request, slug):
+
+	products = Product.objects.all().filter(category__slug=slug)
+
+
 	if request.method == 'POST':
 		name = request.POST.get('name', None)
 		phone = request.POST.get('phone', None)
 		message = request.POST.get('message', None)
 		telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
 
-	return render(
-	request=request,
-	template_name = 'catalog-istok.html')
 
-
-
-def CatalogPageViewPhonak(request):
-	if request.method == 'POST':
-		name = request.POST.get('name', None)
-		phone = request.POST.get('phone', None)
-		message = request.POST.get('message', None)
-		telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
 
 	return render(
 	request=request,
-	template_name = 'catalog-phonak.html')
+	template_name = 'catalog.html',
+	context = {'products': products})
+
 
 
 def ServisePageView(request):

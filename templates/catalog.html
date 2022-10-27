@@ -2,6 +2,8 @@
 {% load static %}
 {% block content %}
 
+{% load num_filter %}
+
 <section class="mt-5">
     <div class="container">
         <div class="row">
@@ -96,23 +98,24 @@
             Слуховые аппараты
         </h2>
             <div class="row">
+            {% for product in products %}
             <div class="col-12 col-md-6 col-xl-3 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="text-center">
-                            <img src="{% static 'images/products/product_8.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Багира Pro-01">
+                            <img src="{{ product.img.url }}" class="img-fluid"
+                                 alt="{{ product.name }}">
                         </div>
                         <h4 class="my-4 f-22">
-                            Слуховой аппарат Багира Pro-01
+                            {{ product.name }}
                         </h4>
                         <p class="text-info f-22 mb-0">
-                            34 900 руб.
+                            {{ product.price|number_sep }} сум.
                         </p>
                         <p class="text-muted mb-4">
                             В наличии
                         </p>
-                        <a href="{% url 'product' %}" class="btn btn-dark btn-block border-0">
+                        <a href="{% url 'product' product.slug %}" class="btn btn-dark btn-block border-0">
                             Подробный
                         </a>
                         <a href="#" class="btn btn-outline-dark btn-block">
@@ -121,7 +124,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
+            {% endfor %}
+            {% comment %}
+            <!-- <div class="col-12 col-md-6 col-xl-3 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
                         <div class="text-center">
@@ -478,8 +483,8 @@
                         </a>
                     </div>
                 </div>
-            </div>
-
+            </div> -->
+            {% endcomment %}
             <div class="col-12">
                 <ul class="pagination mt-5 justify-content-center">
                     <li class="page-item">

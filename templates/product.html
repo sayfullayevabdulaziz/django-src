@@ -1,30 +1,35 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load num_filter %}
 
 <section class="bg-white border-bottom">
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-5">
-                <img src="{% static 'images/products/product_8.png' %}" class="img-fluid" alt="Слуховой аппарат Siya 2 BTE 13 PP">
+                <img src="{{ product.img.url }}" class="img-fluid" alt="{{ product.name }}">
             </div>
             <div class="col-12 col-xl-7 py-4 d-flex flex-column justify-content-around">
                 <h4 class="mb-4">
-                    Слуховой аппарат Багира Pro-01
+                    {{ product.name }}
                 </h4>
                 <p class="text-muted mb-4 f-18">
-                    16-канальный цифровой слуховой аппарат с программируемой мощностью. Используется для компенсации потерь слуха от умеренной до средне-тяжелой степени.
+                    {{ product.description }}
                 </p>
+                <h4 class="mb-4">
+                    Функции
+                </h4>
                 <ul class="text-muted f-18">
-                    <li>Шумоподавление</li>
-                    <li>Подавление обратной связи</li>
-                    <li>Нанопокрытие</li>
-                    <li>Влагозащищенность</li>
+                    {% for funk in product.funcsi.all %}
+                        <li>{{ funk }}</li>
+                    {% endfor %}
                 </ul>
+
+
                 <div class="row align-items-center">
                     <div class="col-auto">
                         <p class="text-info f-22 mb-0">
-                            34 900 руб.
+                            {{ product.price|number_sep }} сум.
                         </p>
                     </div>
                     <div class="col-auto">
@@ -40,66 +45,155 @@
 </section>
 <section class="mb-5 bg-white pb-5">
     <div class="container">
-        <div class="row py-5">
-            <div class="col-12">
-                <h4 class="f-28 mb-4">Описание модели</h4>
-                <p class="f-18">
-                    Багира Pro-01 – серия цифровых программируемых многоканальных слуховых аппаратов с программируемой мощностью и функцией анализа окружающей обстановки.
-                    Благодаря плавающей матрице Багира Pro-01 способен скорректировать любую степень потери слуха.
-                    Уникальная гибкость настройки обеспечивается возможностью использования от 1 до 16 каналов цифровой обработки сигнала.
-                    Автоматическая программа гарантирует работу аппарата в 12-ти акустических ситуациях.
-                </p>
-            </div>
-        </div>
+
         <div class="row">
-            <div class="col-12">
-                <div class="card shadow-none card-info mb-4">
-                    <div class="card-header">
-                        Функции
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">
-                                <div>
-                                    Шумоподавление
-                                </div>
-                                <div>
-                                    <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">
-                                </div>
-                            </div>
-                            <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">
-                                <div>
-                                    Подавление обратной связи
-                                </div>
-                                <div>
-                                    <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">
-                                </div>
-                            </div>
-                            <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">
-                                <div>
-                                    Влагозащищенность
-                                </div>
-                                <div>
-                                    <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">
-                                </div>
-                            </div>
+            <!--<div class="col-12">-->
+            <!--    <div class="card shadow-none card-info mb-4">-->
+            <!--        <div class="card-header">-->
+            <!--            Функции-->
+            <!--        </div>-->
+            <!--        <div class="card-body p-0">-->
+            <!--            <div class="row">-->
+            <!--                <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">-->
+            <!--                    <div>-->
+            <!--                        Шумоподавление-->
+            <!--                    </div>-->
+            <!--                    <div>-->
+            <!--                        <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">-->
+            <!--                    <div>-->
+            <!--                        Подавление обратной связи-->
+            <!--                    </div>-->
+            <!--                    <div>-->
+            <!--                        <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">-->
+            <!--                    <div>-->
+            <!--                        Влагозащищенность-->
+            <!--                    </div>-->
+            <!--                    <div>-->
+            <!--                        <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">-->
+            <!--                    </div>-->
+            <!--                </div>-->
 
 
-                            <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">
-                                <div>
-                                    Нанопокрытие
+            <!--                <div class="col-12 py-3 px-5 d-flex justify-content-between align-items-center">-->
+            <!--                    <div>-->
+            <!--                        Нанопокрытие-->
+            <!--                    </div>-->
+            <!--                    <div>-->
+            <!--                        <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">-->
+            <!--                    </div>-->
+            <!--                </div>-->
+
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
+            <div class="col-12 mt-5">
+                <div class="mo-card-group">
+                    <div class="mo-card">
+                        <div class="mo-card-header">
+                            <h4>Характеристики модели</h4>
+                            <button type="button">
+                                <span class="mo-card-header-button-line"></span>
+                            </button>
+                        </div>
+                        <div class="mo-card-body">
+                            <hr>
+                            <div class="card shadow-none card-info">
+                                <div class="card-header">
+                                    Все характеристики модели
                                 </div>
-                                <div>
-                                    <img src="{% static 'images/icons/check.svg' %}" class="ml-auto" alt="">
+                                <div class="card-body p-0">
+                                    <div class="row">
+                                        <div class="col-6 py-3">
+                                            Производитель:
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            Исток Аудио
+                                        </div>
+
+                                        <div class="col-6 py-3">
+                                            Тип корпуса:
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            Заушный
+                                        </div>
+
+                                        <div class="col-6 py-3">
+                                            Уровень мощности:
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            Сверхмощный
+                                        </div>
+
+                                        <div class="col-6 py-3">
+                                            Тип обработки сигнала:
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            Цифровой
+                                        </div>
+
+                                        <div class="col-6 py-3">
+                                            Количество каналов:
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            20
+                                        </div>
+                                        <div class="col-6 py-3">
+                                            Максимальное акустическое усиление*, (дБ)
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            82
+                                        </div>
+                                        <div class="col-6 py-3">
+                                            Максимальный ВУЗД90**,(дБ)
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            142
+                                        </div>
+                                        <div class="col-6 py-3">
+                                            Батарейка
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            675
+                                        </div>
+                                        <div class="col-6 py-3">
+                                            Количество программ прослушивания
+                                        </div>
+                                        <div class="col-6 px-4 py-3">
+                                            6
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="mo-card-group">
+                    <div class="mo-card">
+                        <div class="mo-card-header">
+                            <h4>Дополнительно</h4>
+                            <button type="button">
+                                <span class="mo-card-header-button-line"></span>
+                            </button>
+                        </div>
+                        <div class="mo-card-body">
+                            <hr>
+                            <p>
+                                Брошюра по уходу за слуховым аппаратом:
+                            </p>
+                            <div>
+                                <img src="{% static 'images/icons/adobe.svg' %}" alt="">
+                            </div>
+                            <div class="py-3">
+                                <a href="#" class="text-info">Скачать</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="mo-card">
                         <div class="mo-card-header">
                             <h4>Отзывы</h4>
@@ -134,80 +228,6 @@
                                 <p class="text-muted">
                                     30.11.2021
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mo-card">
-                        <div class="mo-card-header">
-                            <h4>Все характеристики модели</h4>
-                            <button type="button">
-                                <span class="mo-card-header-button-line"></span>
-                            </button>
-                        </div>
-                        <div class="mo-card-body">
-                            <hr>
-                            <div class="card shadow-none card-info">
-                                <div class="card-header">
-                                    Все характеристики модели
-                                </div>
-                                <div class="card-body p-0">
-                                    <div class="row">
-                                        <div class="col-6 py-3">
-                                            Производитель:
-                                        </div>
-                                        <div class="col-6 px-4 py-3">
-                                            Исток Аудио
-                                        </div>
-
-                                        <div class="col-6 py-3">
-                                            Тип корпуса:
-                                        </div>
-                                        <div class="col-6 px-4 py-3">
-                                            Заушный
-                                        </div>
-
-                                        <div class="col-6 py-3">
-                                            Уровень мощности:
-                                        </div>
-                                        <div class="col-6 px-4 py-3">
-                                            Мощный
-                                        </div>
-
-                                        <div class="col-6 py-3">
-                                            Тип обработки сигнала:
-                                        </div>
-                                        <div class="col-6 px-4 py-3">
-                                            Цифровой
-                                        </div>
-
-                                        <div class="col-6 py-3">
-                                            Количество каналов:
-                                        </div>
-                                        <div class="col-6 px-4 py-3">
-                                            16
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mo-card">
-                        <div class="mo-card-header">
-                            <h4>Дополнительно</h4>
-                            <button type="button">
-                                <span class="mo-card-header-button-line"></span>
-                            </button>
-                        </div>
-                        <div class="mo-card-body">
-                            <hr>
-                            <p>
-                                Брошюра по уходу за слуховым аппаратом:
-                            </p>
-                            <div>
-                                <img src="{% static 'images/icons/adobe.svg' %}" alt="">
-                            </div>
-                            <div class="py-3">
-                                <a href="#" class="text-info">Скачать</a>
                             </div>
                         </div>
                     </div>

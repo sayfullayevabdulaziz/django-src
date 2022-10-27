@@ -7,9 +7,9 @@ urlpatterns = [
 
 	path('', IndexPageView, name='index'),
 	path('center/', CenterPageView, name='center'),
-	path('product/', ProductPageView, name='product'),
+	path('product/<slug:slug>', ProductPageView, name='product'),
 	path('service/', ServisePageView, name='service'),
-	path('catalog/phonak', CatalogPageViewPhonak, name='catalog-phonak'),
-	path('catalog/istok-audio', CatalogPageViewIstok, name='catalog-istok'),
+	# path('catalog/phonak', CatalogPageViewPhonak, name='catalog-phonak'),
+	path('catalog/<slug:slug>', CatalogPageView, name='catalog-product'),
 				
 ]

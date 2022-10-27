@@ -1,3 +1,18 @@
 from django.contrib import admin
-from .models import Comment 
-admin.site.register(Comment)
+from .models import Comment, Category, Product, Fnksii
+
+
+# admin.site.register(Comment)
+
+class CategoryAdmin(admin.ModelAdmin):
+	prepopulated_fields = {"slug": ("name",)}
+
+
+class ProductAdmin(admin.ModelAdmin):
+	list_display = ['name','category']
+	prepopulated_fields = {"slug": ("name",)}
+
+
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Fnksii)
