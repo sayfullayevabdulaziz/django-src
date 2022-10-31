@@ -78,7 +78,6 @@ h4{
 .map .container .bg-effect{
     border-radius: 10px;
     overflow: hidden;
-    background-image: url("../images/map.png");
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 80px;

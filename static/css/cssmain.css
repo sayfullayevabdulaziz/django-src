@@ -75,10 +75,9 @@ h4{
     background-size: 100%;
     padding: 80px;
 }
-.map .container .bg-effect{
+.custom-map .container .bg-effect{
     border-radius: 10px;
     overflow: hidden;
-    background-image: url("../images/map.png");
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 80px;
@@ -647,7 +646,6 @@ nav .modal .list-unstyled a:hover{
         font-size: 20px;
     }
     .map .container .bg-effect{
-        background-image: none;
         padding: 2rem;
     }
     .map .container .bg-effect .text-white{

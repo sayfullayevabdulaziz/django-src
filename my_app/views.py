@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import requests
-from .models import Product
+from .models import Product, Technique
 
 
 def telegram_bot_sendtext(bot_message):
@@ -38,6 +38,7 @@ def CenterPageView(request):
 def ProductPageView(request, slug):
 
 	product = Product.objects.get(slug=slug)
+	tech = Technique.objects.filter(product__slug=slug)
 
 	if request.method == 'POST':
 		name = request.POST.get('name', None)
@@ -48,7 +49,11 @@ def ProductPageView(request, slug):
 	return render(
 			request=request,
 			template_name='product.html',
-			context={'product': product}
+			context={
+			'product': product,
+			'techniq': tech
+			}
+
 		)
 
 

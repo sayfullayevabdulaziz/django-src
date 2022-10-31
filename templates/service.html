@@ -142,30 +142,30 @@
           <div class="card">
             <div class="card-body">
               <form method="post">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <label for="name">Имя</label>
-                                    <input id="name" name="name" type="text" class="form-control" placeholder="Введите Имя">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Телефон</label>
-                                    <input id="phone" name="phone" type="tel" class="form-control" placeholder="Введите Телефон">
-                                </div>
-                                <div class="form-group">
-                                    <label for="text">Текст</label>
-                                    <input id='text' name="message" type="text" class="form-control" placeholder="Введите текст">
-                                </div>
-                                <div class="form-group mt-4 pt-3">
-                                    <button type="submit" class="btn btn-success btn-block">
-                                        Записаться на приём
-                                    </button>
-                                </div>
-                                <p class="small text-center">
-                                    Отправляя данные, вы даёте согласие
-                                    на
-                                    <a href="#" class="text-success">обработку ваших персональных данных</a>
-                                </p>
-                            </form>
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input id="name" name="name" type="text" class="form-control" placeholder="Введите Имя">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input id="phone" name="phone" type="tel" class="form-control" placeholder="Введите Телефон">
+                </div>
+                <div class="form-group">
+                    <label for="text">Текст</label>
+                    <input id='text' name="message" type="text" class="form-control" placeholder="Введите текст">
+                </div>
+                <div class="form-group mt-4 pt-3">
+                    <button type="submit" class="btn btn-success btn-block">
+                        Записаться на приём
+                    </button>
+                </div>
+                <p class="small text-center">
+                    Отправляя данные, вы даёте согласие
+                    на
+                    <a href="#" class="text-success">обработку ваших персональных данных</a>
+                  </p>
+              </form>
             </div>
           </div>
         </div>
@@ -173,13 +173,13 @@
     </div>
   </div>
 </section>
-<section class="map">
+<section class="custom-map">
   <div class="container">
     <div class="bg-effect">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad2e80ff657829f8bd8fe04b828b2d042b3cfe8c505386a68427a0e50ac7304d5&amp;source=constructor" width="100%" height="599" ></iframe>
       <div class="row justify-content-between align-items-end">
         <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
         <div class="mb-4 mb-xl-0 col-12 col-xl-4">
-          <div class="">
             <div class="card">
               <div class="card-body">
                 <div class="small mb-3">Адрес</div>
@@ -203,11 +203,9 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 <section class="mt-4">
