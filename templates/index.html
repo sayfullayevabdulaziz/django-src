@@ -1,8 +1,36 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<section class="banner">
+<section class="banner mt-4">
     <div class="container">
+        <div id="gallery" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+
+                <li data-target="#gallery" data-slide-to="0" class="active"></li>
+                <li data-target="#gallery" data-slide-to="1" ></li>
+                
+            </ol>
+        <div class="carousel-inner">
+            {% for banner in banners %}
+            <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
+                <a href="news/{{ banner.slug }}">
+                    <img class="d-block w-100 h-100" src="{{ banner.image.url }}" alt="{{ banner.title }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+      
+   
+    {% comment %}
         <div class="card border-0 bg-purple">
             <img src="{% static '/images/banner_1.png' %}" class="img-fluid" alt="">
             <div class="card-img-overlay p-3 p-lg-5">
@@ -24,7 +52,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{% endcomment %}
     </div>
 </section>
 <section class="mb-5">
@@ -270,41 +298,51 @@
         </div>
     </div>
 </section>
-<section class="map">
-    <div class="container">
-        <div class="bg-effect">
-            <div class="row justify-content-between align-items-end">
-                <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
-                <div class="mb-4 mb-xl-0 col-12 col-xl-4">
-                    <div class="">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="small mb-3">Адрес</div>
-                                <p class="mb-4">
-                                    Ташкент, Яккасарайский район, улица Бабура 40 В
-                                </p>
-                                <div class="small mb-3">Часы работы</div>
-                                <div>
-                                   <strong>Пн.–Пт.</strong> с 9:00 до 17:00
-                                </div>
-                                <div>
-                                   <strong>Сб.</strong> с 9:00 до 14:00
-                                </div>
-                                <div class="mb-4">
-                                   <strong>Вс.</strong> — выходной
-                                </div>
-                                <div class="small mb-3">Телефон</div>
-                                <div class="d-flex">
-                                    <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
-                                    <a href="tel:+998998404536" class="text-body">(+998 99) 840-45-36</a>
-                                </div>
-                            </div>
-                        </div>
+<section class="custom-map">
+  <div class="container">
+    <div class="bg-effect">
+      <iframe class="iframe-idi" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad2e80ff657829f8bd8fe04b828b2d042b3cfe8c505386a68427a0e50ac7304d5&amp;source=constructor" width="100%" height="599" ></iframe>
+      <div class="row justify-content-between align-items-end">
+        <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
+        <div class="mb-4 mb-xl-0 col-12 col-xl-4 card-class">
+            <div class="card">
+                <div class="card-body">
+                    <div class="small mb-2">Адрес</div>
+                    <p class="mb-4">
+                    <b>Якксарайский филиал:</b><br>
+                    Ташкент, Яккасарайский район, улица Бабура 40 В
+                    </p>
+
+                    <div class="d-flex">
+                    <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
+                    <a href="tel:+998998404536" class="text-body">(+998 99) 840-45-36</a>
+                    </div><br>
+
+                    <p class="mb-4">
+                    <b>Юнусабадский филиал:</b><br>
+                    8, 10 Осиё кучаси, Тaшкент
+                    </p>
+                    <div class="d-flex">
+                    <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
+                    <a href="tel:+998950084536" class="text-body">(+998 95) 008-45-36</a>
+                    </div>
+                    <div class="small mb-2">Часы работы</div>
+                    <div>
+                    <strong>Пн.–Пт.</strong> с 9:00 до 17:00
+                    </div>
+                    <div>
+                    <strong>Сб.</strong> с 9:00 до 14:00
+                    </div>
+                    <div class="mb-3">
+                    <strong>Вс.</strong> — выходной
                     </div>
                 </div>
             </div>
         </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <section class="mt-4">
     <div class="container">

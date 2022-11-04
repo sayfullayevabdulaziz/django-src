@@ -6,14 +6,19 @@ from django.contrib.admin import AdminSite
 
 
 class BannerAdminForm(forms.ModelForm):
-	description = forms.CharField(widget=CKEditorUploadingWidget())
-    class Meta:
-        model=Banner
+	description = forms.CharField(
+		widget=CKEditorUploadingWidget()
+	)
+
+	class Meta:
+		model = Banner
+		fields = '__all__'
 
 
 @admin.register(Banner)
 class BannerAdmin(admin.ModelAdmin):
 	form = BannerAdminForm
+	prepopulated_fields = {"slug": ("title",)}
 	list_display = ['title']
 
 

@@ -2,28 +2,74 @@
 {% load static %}
 {% block content %}
 <section class="banner">
-    <div class="container">
-        <div class="card border-0 bg-success">
-            <img src="{% static 'images/banner_5.png' %}" class="img-fluid" alt="">
-            <div class="card-img-overlay p-3 p-lg-5">
-                <div class="row h-100">
-                    <div class="col-8 col-xl-6 d-flex flex-column justify-content-center">
-                        <h1 class="text-white ml-xl-5 ml-3">
-                            Внутри
-                        </h1>
-                        <h1 class="text-white mb-xl-4 ml-3 ml-xl-5">
-                            «Радуги звуков» —
-                        </h1>
-                        <h3 class="text-white mb-4 ml-3 ml-xl-5">
-                            уютные кабинеты, внимательные сотрудники и лучшее оборудование
-                        </h3>
-                    </div>
-                </div>
+    <div class="container container-sm container-md container-lg container-xl">
+        <div class="row mt-4">
+            
+            <p  class="text-size ml-3">Слуховые аппараты Ташкент. Тестирование слуха</p>
+           </div>
+               <br>
+        <div class="row ">
+            
+          
+           <div class="col-md-4 col-sm-4 col-xs-12">
+                        <span class="props-name ml-5 mt-3 "><b>Адрес:</b></span>
+                        <div class="props-value ml-5 mb-3">Ташкент, Яккасарайский район, улица Бабура 40 В</div>
+                
             </div>
+            <br>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 ">
+                        <span class="props-name ml-5 mt-3"><b>Часы работы:</b></span>
+                        <div class="props-value ml-5 mb-3">Пн.–Пт. с 9:00 до 17:00<br>Сб. с 9:00 до 14:00<br>Вс. — выходной                   </div>
+
+            </div>
+            <br>    
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                        <span class="props-name ml-5 mt-3"><b>Телефон:</b></span>
+                        <div class="props-value ml-5 ">(+9 9899) 8404536<br><sub>Предварительная запись</sub></div>
+            </div>
+                        
         </div>
-    </div>
+        <hr style="border-bottom: black 0.5px solid;">
+          <div class="row ">
+            
+          
+           <div class="col-md-4 col-sm-4 col-xs-12 ">
+                        <span class="props-name ml-5 mt-3 "><b>Адрес:</b></span>
+                        <div class="props-value ml-5 mb-3">8, 10 Осиё кучаси, Тaшкент</div>
+                
+            </div>
+            <br>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 ">
+                        <span class="props-name ml-5 mt-3"><b>Часы работы:</b></span>
+                        <div class="props-value ml-5 mb-3">Пн.–Пт. с 9:00 до 17:00<br>Сб. с 9:00 до 14:00<br>Вс. — выходной                   </div>
+
+            </div>
+            <br>    
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                        <span class="props-name ml-5 mt-3"><b>Телефон:</b></span>
+                        <div class="props-value ml-5 ">(+9 9895) 0084536<br><sub>Предварительная запись</sub></div>
+            </div>
+                        
+        </div>
+            
 </section>
-<section class="mb-5">
+
+<section class="custom-map">
+  <div class="container">
+    <div class="bg-effect">
+      <iframe class="iframe-idi" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad2e80ff657829f8bd8fe04b828b2d042b3cfe8c505386a68427a0e50ac7304d5&amp;source=constructor" width="100%" height="599" ></iframe>
+      <div class="row justify-content-between align-items-end">
+        <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mb-1">
     <div class="container">
         <h2 class="m-0 py-5">Наш центр</h2>
         <div class="row">
@@ -50,6 +96,35 @@
         </div>
     </div>
 </section>
+
+
+<section class="mb-5">
+    <div class="container">
+         <h2 class="m-0 py-5">Наш специалист</h2>
+        <div class="card">
+            <div class="row">
+                <div class="col-12 col-xl-7">
+                    <div class="card-body py-4">
+                            
+                        <h2 class="mb-3 pl-3 service-title">
+                            Шарипова Юлдуз Эркиновна: акустик, специалист центра
+                        </h2>
+                        <p class="text-muted f-18 pl-3">
+                            Прошла основное обучение по основам аудиологии и акустики, а также по программированию современных слуховых аппаратов и снятию слепков уха для изготовления индивидуальных вкладышей и внутриушных слуховых аппаратов в обучающем центре на базе ГК «Исток-Аудио».
+                            <span class="d-block mt-3">
+                                 Регулярно повышает свою квалификацию и посещает учебные семинары, которые ГК «Исток-Аудио» проводит совместно с крупнейшими производителями слуховых аппаратов.
+                         </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-5">
+                    <img src="{% static 'images/doctor-sister.png' %}" class="img-fluid w-100 h-100" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="mb-5">
     <div class="container">
         <h2 class="mb-0 py-5">
@@ -204,7 +279,8 @@
     </div>
 </section>
 
-<section class="mb-5 contacts">
+
+<section id="target" class="mb-5 contacts">
     <div class="container">
         <div class="bg-effect">
             <div class="row justify-content-between align-items-end">
@@ -253,43 +329,7 @@
         </div>
     </div>
 </section>
-<section class="map">
-    <div class="container">
-        <div class="bg-effect">
-            <div class="row justify-content-between align-items-end">
-                <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
-                <div class="mb-4 mb-xl-0 col-12 col-xl-4">
-                    <div class="">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="small mb-3">Адрес</div>
-                                <p class="mb-4">
-                                    Ташкент, Яккасарайский район, улица Бабура 40 В
-                                </p>
-                                <div class="small mb-3">Часы работы</div>
-                                <div>
-                                    <strong>Пн.–Пт.</strong> с 9:00 до 17:00
-                                </div>
-                                <div>
-                                    <strong>Сб.</strong> с 9:00 до 14:00
-                                </div>
-                                <div class="mb-4">
-                                    <strong>Вс.</strong> — выходной
-                                </div>
-                                <div class="small mb-3">Телефон</div>
-                                <div class="d-flex">
-                                    <img class="mr-2" src="images/icons/phone.svg" alt="" />
-                                    <a href="tel:+998998404536" class="text-body">(+998 99) 840-45-36</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
-</section>
 <section class="mt-4">
     <div class="container">
         <div class="border-bottom py-5 px-3" style="border-color:#D7D7D7!important;">
@@ -324,7 +364,7 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-xl-4 text-right">
-                    <a href="#" class="btn btn-outline-dark">
+                    <a href="#target" class="btn btn-outline-dark">
                         Мы вам перезвоним!
                     </a>
                 </div>

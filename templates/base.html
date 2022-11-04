@@ -1,11 +1,11 @@
-<!DOCTYPE HTML>
 {% load static %}
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Что получают клиенты «Радуги звуков»</title>
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/cssmain.css' %}" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
@@ -18,7 +18,142 @@
         .mo-modal-visible.mo-nav-modal {
             opacity: 1;
         }
+        .iframe-idi {
+            border-image: none;
+            border-color: rgb(0 0 0 / 0%) !important;
+            border-radius: 15px !important;
+        }
+        .bg-effect {
+            position: relative;
+        }
+        .card-class {
+            position: absolute;
+            top: 60px;
+            right: 70px;
+        }
+        
+        .text-size{
 
+            font-size: 45px;
+        }
+        @media screen and (min-width: 390px) {
+       
+        .text-size {
+        
+        font-size: 25px;
+        }}
+        @media screen and (min-width: 450px) {
+        .text-size {
+        
+        font-size:30px;
+         }
+        }
+
+
+        .opa-img{
+             
+             width: 450px;
+             height: 350px; 
+        }
+         @media screen and (max-width: 770px) {
+        .opa-img {
+        
+        width:300px;
+        height: 250px;
+        }}
+        
+        @media screen and (max-width: 540px) {
+        .opa-img{
+        
+        width: 250px;
+        height: 150px;
+        }
+        }
+        @media screen and (max-width: 450px) {
+        .opa-img{
+        width: 150px;
+        height: 100px;
+        
+        
+        }
+        @media screen and (max-width: 400px) {
+        .opa-im{
+        
+        font-size: 10px;
+       
+
+                }
+
+        .opa-text{
+           
+  
+          font-size: 21px;                
+        }
+        @media screen and (max-width: 800px) {
+        .opa-text {
+        
+        font-size: 15px;
+        }}
+        
+        @media screen and (max-width: 550px) {
+        .opa-text{
+        
+        font-size: 12px;
+        }
+        }
+        @media screen and (max-width: 450px) {
+        .opa-text{
+        
+        font-size: 10px;
+       
+        }
+        @media screen and (max-width: 400px) {
+        .opa-text{
+        
+        font-size: 10px;
+        
+         }
+
+        .img-moma{
+            width: 550px;
+            height: 550px;
+         }
+
+
+         .icon-doctor{
+            position: absolute;
+            margin-top: 250px;
+         }
+
+        .banner {
+            background-color: transparent;
+        }
+
+
+
+        @media screen and (min-width: 450px) {
+        .text-size {
+        
+        font-size:30px;
+         }
+        }
+
+        @media screen and (min-width: 550px) {
+        .text-size {
+        
+        font-size: 35px;
+        }}
+        @media screen and (min-width: 650px) {
+        .text-size{
+        
+        font-size: 40px;
+        }
+        }
+        @media screen and (min-width: 750px) {
+        .text-size{
+        
+        font-size: 45px;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +228,7 @@
                     </li>
 
                     <li class="nav-item {% if request.path == '/center/' %}active{% else %}{% endif %} ">
-                        <a href="{% url 'center' %}" class="nav-link">Наш центр</a>
+                        <a href="{% url 'center' %}" class="nav-link">Наши центры</a>
                     </li>
                 </ul>
             </div>
@@ -302,6 +437,8 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/forma.js' %}"></script>
 <script src="{% static 'js/acardion.js' %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
 
 <script>
     const moNavModal = document.querySelector('.mo-nav-modal');

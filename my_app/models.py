@@ -59,8 +59,9 @@ class Comment(models.Model):
 
 
 class Banner(models.Model):
-    image = models.ImageField(upload_to='photos/banner', blank=True)
+    image = models.ImageField(upload_to='static/images/banner', blank=True)
     title = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=50, blank=True, null=True)
     description = RichTextField()
     created_at = models.DateTimeField(auto_now_add=True)
 

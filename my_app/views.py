@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import requests
-from .models import Product, Technique
+from .models import Product, Technique, Banner
 
 
 def telegram_bot_sendtext(bot_message):
@@ -11,6 +11,9 @@ def telegram_bot_sendtext(bot_message):
 
 
 def IndexPageView(request):
+
+	banners = Banner.objects.all()
+
 	if request.method == 'POST':
 		name = request.POST.get('name', None)
 		phone = request.POST.get('phone', None)
@@ -19,7 +22,9 @@ def IndexPageView(request):
 
 	return render(
 	request=request,
-	template_name='index.html')
+	template_name='index.html',
+	context={'banners': banners}
+	)
 
 
 def CenterPageView(request):
@@ -41,10 +46,19 @@ def ProductPageView(request, slug):
 	tech = Technique.objects.filter(product__slug=slug)
 
 	if request.method == 'POST':
-		name = request.POST.get('name', None)
-		phone = request.POST.get('phone', None)
-		message = request.POST.get('message', None)
-		telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
+		
+		if 'surname' in request.POST:
+			name = request.POST.get('name', None)
+			surname = request.POST.get('surname', None)
+			phone = request.POST.get('phone', None)
+			product_name = request.POST.get('product-name', None)
+			telegram_bot_sendtext(f"Ismi:{name}\nFamiliya:{surname}\nTelefon raqami:{phone}\nProduct:{product_name}")
+		else:
+			name = request.POST.get('name', None)
+			phone = request.POST.get('phone', None)
+			message = request.POST.get('message', None)
+			telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
+
 
 	return render(
 			request=request,
@@ -90,3 +104,18 @@ def ServisePageView(request):
 	request=request,
 	template_name='service.html')
 
+
+def NewsPage(request, slug):
+
+	banner = Banner.objects.get(slug=slug)
+
+	if request.method == 'POST':
+		name = request.POST.get('name', None)
+		phone = request.POST.get('phone', None)
+		message = request.POST.get('message', None)
+		telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
+
+	return render(
+	request=request,
+	template_name='news.html',
+	context={'banner': banner})

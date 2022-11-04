@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} 
+
+<section class="bg-white border-bottom mb-5">
+    <div class="container ckeditor-edits">
+        <img class="img-moma w-100 h-100 mb-5" src="{{ banner.image.url }}" alt="">
+        <h3 class="text-size ml-1 pt-3 mb-3"> {{ banner.title }}</h3>
+        {{ banner.description|safe }}
+        
+        {% comment %}
+        <span>
+            <p>«Радуга звуков» проводит дни открытых дверей!</p>
+        
+            <p>Ханты-Мансийск — 15 и 16 ноября
+                <br>
+            Уфа — 17 и 18 ноября
+            <br>
+            Нижневартовск — с 23 по 25 ноября
+            <br>
+            Курск — с 24 по 26 ноября
+            <br>
+            Нальчик — 7 и 8 декабря
+            </p>
+            <p>Скидки, бесплатные консультация и тестирование слуха в нашем комфортном кабинете, пробное ношение слухового аппарата.
+
+            </p>
+       </span>
+       <br>
+        <p>Дни открытых дверей в «Радуге звуков» это:</p>
+        
+        <table width="90%" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td colspan="1">
+                         &nbsp;
+                    </td>
+                    <td colspan="1">
+                         &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20px; vertical-align: top;">
+                 <img itemprop="image" width="10" alt="green-circle" src="{% static 'images/circle.png' %}" height="10" title="green-circle"><br>
+                    </td>
+                    <td colspan="1">
+                 <b><span style="font-size: 12pt;">Скидки до 30%.</span></b><span style="font-size: 12pt;"> На&nbsp;отдельные модели слуховых аппаратов</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                 <br>
+                    </td>
+                    <td colspan="1">
+                         &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20px; vertical-align: top;">
+                 <img itemprop="image" width="10" alt="green-circle" src="{% static 'images/circle.png' %}" height="10" title="green-circle">
+                    </td>
+                    <td valign="middle">
+                 <span style="font-size: 12pt;"><b>Бесплатное тестирование слуха.</b> Вы&nbsp;узнаете, насколько хорошо слышите разные звуки и&nbsp;получите заключение сурдоакустика. Расскажем и покажем, как работает слух, почему он снижается и как это вовремя заметить</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                         &nbsp;
+                    </td>
+                    <td colspan="1">
+                         &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 20px; vertical-align: top;">
+                 <img itemprop="image" width="10" alt="green-circle" src="{% static 'images/circle.png' %}" height="10" title="green-circle"><br>
+                    </td>
+                    <td valign="middle">
+                 <span style="font-size: 12pt;"><b>Консультация ведущего сурдоакустика «Радуги звуков». </b>Подробно расскажем о&nbsp;современных слуховых аппаратах: какими они бывают, как работают и&nbsp;почему их&nbsp;не&nbsp;стоит бояться. Консультацию проводит опытный специалист «Радуги звуков» по&nbsp;слуховым аппаратам. В «Радугу звуков» приходят люди с разными увлечениями и возможностями, но каждый из них находит «свой» аппарат: при выборе мы ориентируемся не только на состояние слуха, но и на личные предпочтения и образ жизни</span>
+                    </td>
+                </tr>
+                <tr>
+            <td colspan="1">
+                 &nbsp;
+            </td>
+            <td colspan="1">
+                 &nbsp;
+            </td>
+                </tr>
+                <tr>
+                    <td style="width: 20px; vertical-align: top;">
+                 <img itemprop="image" width="10" alt="green-circle" src="{% static 'images/circle.png' %}" height="10" title="green-circle"><br>
+                    </td>
+                    <td valign="middle">
+                 <span style="font-size: 12pt;"><b>Пробное ношение и рассрочка.</b> Если остались сомнения — перед окончательной покупкой слуховой аппарат можно взять домой на несколько дней и опробовать в привычной обстановке. Также мы предоставляем возможность оплатить покупку не сразу, а по частям. При этом вы не переплатите, как если бы это был кредит</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1">
+                         &nbsp;
+                    </td>
+                    <td colspan="1">
+                         &nbsp;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {% endcomment %}
+    </div>
+</section>
+
+<section id="target" class="mb-5 contacts">
+    <div class="container">
+        <div class="bg-effect">
+            <div class="row justify-content-between align-items-end">
+                <div class="col-12 mb-5 mb-xl-0 col-xl-6">
+                    <h1 class="text-white">
+                        Запись <br/>
+                        на приём
+                    </h1>
+                    <p class="f-25 text-white w-75 mt-4">
+                        После отправки формы
+                        с вами свяжется наш специалист и подтвердит запись
+                    </p>
+                </div>
+                <div class="col-12 mb-5 mb-xl-0 col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="name">Имя</label>
+                                    <input id="name" name="name" type="text" class="form-control" placeholder="Введите Имя">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input id="phone" name="phone" type="tel" class="form-control" placeholder="Введите Телефон" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">Текст</label>
+                                    <input id='text' name="message" type="text" class="form-control" placeholder="Введите текст">
+                                </div>
+                                <div class="form-group mt-4 pt-3">
+                                    <button type="submit" class="btn btn-success btn-block">
+                                        Записаться на приём
+                                    </button>
+                                </div>
+                                <p class="small text-center">
+                                    Отправляя данные, вы даёте согласие
+                                    на
+                                    <a href="#" class="text-success">обработку ваших персональных данных</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-4">
+    <div class="container">
+        <div class="border-bottom py-5 px-3" style="border-color:#D7D7D7!important;">
+            <div class="row align-items-center">
+                <div class="col-12 mb-3 mb-xl-0 col-md-12 col-xl-4">
+                    <ul class="nav justify-content-center justify-content-lg-start">
+                        <li class="mr-2 nav-item">
+                            <a href="https://www.facebook.com/radugazvukovuz/?ref=page_internal">
+                                <img src="{% static 'images/facebook.png' %}" width="24" height="24" alt="">
+                            </a>
+                        </li>
+                        <li class="mr-2 nav-item">
+                            <a href="https://www.instagram.com/radugazvukovuz/">
+                                <img src="{% static 'images/instagram.png' %}" width="24" height="24" alt="">
+                            </a>
+                        </li>
+                        <li class="mr-2 nav-item">
+                            <a href="https://t.me/radugazvukovuz">
+                                <img src="{% static 'images/Telegram.svg' %}" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 col-xl-4 text-center">
+                    <div class="d-flex">
+                        <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt=""/>
+                        <a href="tel:+998998404536" class="text-body">
+                            <strong>
+                                (+998 99) 840-45-36
+                            </strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-xl-4 text-right">
+                    <a href="#target" class="btn btn-outline-dark">
+                        Мы вам перезвоним!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}
+
+
+{% include "include/footer.html" %}
