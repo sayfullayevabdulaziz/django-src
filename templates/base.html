@@ -154,6 +154,9 @@
         
         font-size: 45px;
         }
+
+
+
     </style>
 </head>
 <body>
@@ -163,11 +166,11 @@
         <div class="border-bottom py-4 px-3">
             <div class="row align-items-center">
                 <div class="mb-3 mb-lg-0 col-12 col-sm-12 col-md-12 col-lg-3">
-                    <a href="{% url 'index' %}" class="navbar-brand">
-                        <img src="{% static 'images/logo.svg' %}" alt="">
+                    <a href="{% url 'index' %}" class="navbar-brand mr-0">
+                        <img class="w-100" src="{% static 'images/logo.svg' %}" alt="">
                     </a>
                 </div>
-                <div class="mb-3 mb-lg-0 col-12 col-sm-12 col-md-12 col-lg-3">
+                <div class="mb-3 mb-lg-0 col-12 col-sm-12 col-md-12 col-lg-2 display-desctop">
                     <ul class="nav justify-content-center">
                         <li class="mr-2 nav-item">
                             <a href="https://www.facebook.com/radugazvukovuz/?ref=page_internal">
@@ -186,7 +189,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-6 col-md-6 col-lg-3 text-left text-lg-center">
+                <div class="col-6 col-md-6 col-lg-3 text-left text-lg-center px-0 ">
                     <div class="d-flex">
                         <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt=""/>
                         <a href="tel:+998998404536" class="text-body">
@@ -196,11 +199,22 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6 col-md-6 col-lg-3 text-right text-lg-right">
-                    <button type="submit" class="btn btn-outline-dark" data-toggle="modal" data-target="#modalCall">
+                <div class="col-6 col-md-6 col-lg-4 text-right text-lg-right px-0">
+                    <button type="submit" class="btn btn-outline-dark" style="padding: 12px 15px" data-toggle="modal" data-target="#modalCall">
                         Мы вам перезвоним!
                     </button>
-
+                    <li class="nav-item dropdown" style="display:inline-block">
+                        <a class="nav-link dropdown-toggle px-0" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 16px">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
                 </div>
             </div>
         </div>
@@ -241,7 +255,8 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-6">
-                            <a href="#" style="cursor: pointer !important;" class="text-info mb-4 font-weight-bold">Слуховые аппараты111111</a>
+                            <a href="#" style="cursor: pointer !important;" class="text-info mb-4 font-weight-bold">Слуховые
+                                аппараты111111</a>
                             <ul class="list-unstyled">
                                 <li>
                                     <a href="#">Исток-Аудио</a>
@@ -313,7 +328,8 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bd-example-modal-lg" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" id="aboutUsModal" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content p-5">
                 <div class="modal-body">
@@ -384,7 +400,8 @@
         </ul>
     </div>
 </footer>
-<div class="modal fade" id="modalCall" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalCall" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="card">
@@ -393,15 +410,18 @@
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="name">Имя</label>
-                            <input id="name" type="text" name="name" class="form-control" placeholder="Введите Имя" required>
+                            <input id="name" type="text" name="name" class="form-control" placeholder="Введите Имя"
+                                   required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Телефон</label>
-                            <input id="phone" type="tel" name="phone" class="form-control" placeholder="Введите Телефон" required>
+                            <input id="phone" type="tel" name="phone" class="form-control" placeholder="Введите Телефон"
+                                   required>
                         </div>
                         <div class="form-group">
                             <label for="text">Текст</label>
-                            <input id="text" type="text" name="message" class="form-control" placeholder="Введите текст">
+                            <input id="text" type="text" name="message" class="form-control"
+                                   placeholder="Введите текст">
                         </div>
                         <div class="form-group mt-4 pt-3">
                             <button type="submit" class="btn btn-success btn-block">
@@ -437,8 +457,10 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/forma.js' %}"></script>
 <script src="{% static 'js/acardion.js' %}"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
-<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+<script type="text/javascript" src="{% static " ckeditor
+/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static " ckeditor
+/ckeditor/ckeditor.js" %}"></script>
 
 <script>
     const moNavModal = document.querySelector('.mo-nav-modal');
@@ -451,6 +473,7 @@
             moNavModal.classList.remove('mo-modal-visible');
         }
     })
+
 </script>
 
 </body>

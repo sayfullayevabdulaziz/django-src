@@ -46,7 +46,7 @@ def ProductPageView(request, slug):
 	tech = Technique.objects.filter(product__slug=slug)
 
 	if request.method == 'POST':
-		
+
 		if 'surname' in request.POST:
 			name = request.POST.get('name', None)
 			surname = request.POST.get('surname', None)
@@ -119,3 +119,24 @@ def NewsPage(request, slug):
 	request=request,
 	template_name='news.html',
 	context={'banner': banner})
+
+
+def center_tashkent(request):
+
+    if request.method == 'POST':
+        name = request.POST.get('name', None)
+        phone = request.POST.get('phone', None)
+        message = request.POST.get('message', None)
+        telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
+
+    return render(request, 'catalog-istok.html')
+
+def center_tashkent2(request):
+
+    if request.method == 'POST':
+        name = request.POST.get('name', None)
+        phone = request.POST.get('phone', None)
+        message = request.POST.get('message', None)
+        telegram_bot_sendtext(f"Ismi:{name}\nTelefon raqami:{phone}\nXabar:{message}")
+
+    return render(request, 'center-tashkent.html')

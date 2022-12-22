@@ -1,0 +1,359 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="banner mb-2">
+    <div class="container container-sm container-md container-lg container-xl">
+        <div class="row mt-4">
+            <p class="text-size ml-3">Слуховые аппараты Ташкент. Тестирование слуха</p>
+        </div>
+        <br>
+        <div class="row d-flex">
+
+            <div class="col-md-4 col-sm-4 col-xs-12 ">
+                <span class="props-name ml-2 mt-3 "><b>Адрес:</b></span>
+                <div class="props-value ml-2 mb-3">Мирзо-Улугбекский район, ул. Оккургон, 8</div>
+
+            </div>
+            <br>
+
+            <div class="col-md-3 col-sm-3 col-xs-12 ">
+                <span class="props-name ml-2 mt-3"><b>Часы работы:</b></span>
+                <div class="props-value ml-2 mb-3">Пн.–Пт. с 9:00 до 17:00<br>Сб. с 9:00 до 14:00<br>Вс. — выходной
+                </div>
+
+            </div>
+            <br>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <span class="props-name ml-2 mt-3"><b>Телефон:</b></span>
+                <div class="props-value ml-2 ">(+998 95) 0084536<br><sub>Предварительная запись</sub></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="custom-map">
+    <div class="container">
+        <div class="bg-effect">
+            <iframe class="iframe-idi" src="https://yandex.com/map-widget/v1/?um=constructor%3A2dfdce7af36402d04622e6de58db99a8dce4775b0b7ee4fa379a5d89a9a5585e&amp;source=constructor"
+            width="100%" height="599"></iframe>
+            <div class="row justify-content-between align-items-end">
+                <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="mb-1">
+    <div class="container">
+        <h2 class="m-0 py-5">Наш центр</h2>
+        <div class="row">
+            <div class="col-12 col-xl-6 mb-4-5">
+                <div>
+                    <img src="{% static 'images/center/1_1.png' %}" class="img-fluid rounded" alt="">
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6 col-xl-6">
+                        <div>
+                            <img src="{% static 'images/center/1_2.png' %}" class="img-fluid rounded" alt="">
+                        </div>
+                    </div>
+                    <div class="col-6 col-xl-6">
+                        <div>
+                            <img src="{% static 'images/center/1_3.png' %}" class="img-fluid rounded" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6 mb-4-5">
+                <img src="{% static 'images/center/1_4.png' %}" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mb-5">
+    <div class="container">
+        <h2 class="m-0 py-5">Наш специалист</h2>
+        <div class="card">
+            <div class="row">
+                <div class="col-12 col-xl-7">
+                    <div class="card-body py-4">
+
+                        <h2 class="mb-3 pl-3 service-title">
+                            Шарипова Юлдуз Эркиновна: акустик, специалист центра
+                        </h2>
+                        <p class="text-muted f-18 pl-3">
+                            Прошла основное обучение по основам аудиологии и акустики, а также по программированию
+                            современных слуховых аппаратов и снятию слепков уха для изготовления индивидуальных
+                            вкладышей и внутриушных слуховых аппаратов в обучающем центре на базе ГК «Исток-Аудио».
+                            <span class="d-block mt-3">
+                                 Регулярно повышает свою квалификацию и посещает учебные семинары, которые ГК «Исток-Аудио» проводит совместно с крупнейшими производителями слуховых аппаратов.
+                         </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-5">
+                    <img src="{% static 'images/doctor-sister.png' %}" class="img-fluid w-100 h-100" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5">
+    <div class="container">
+        <h2 class="mb-0 py-5">
+            Почему выбирают Центр хорошего слуха «Радуга звуков»
+        </h2>
+        <div class="row">
+            <div class="mb-3 mb-xl-0 col-12 col-xl-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="{% static 'images/impulce.svg' %}" class="img-fluid mb-4" alt="">
+                        <h4 class="my-4">
+                            Комфорт
+                        </h4>
+                        <p class="text-muted f-18 col-10 mb-4">
+                            В центре хорошего слуха мы создаём комфортную и светлую обстановку, чтобы до и во время
+                            приёма человек чувствовал себя уверенно и спокойно.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 mb-xl-0 col-12 col-xl-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="{% static 'images/heart_save.svg' %}" class="img-fluid mb-4" alt="">
+                        <h4 class="my-4">
+                            Забота
+                        </h4>
+                        <p class="text-muted f-18 col-10 mb-4">
+                            Наши специалисты думают прежде всего о том, как помочь, а не быстрее закончить приём.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 mb-xl-0 col-12 col-xl-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="{% static 'images/tel.svg' %}" class="img-fluid mb-4" alt="">
+                        <h4 class="my-4">
+                            Поддержка
+                        </h4>
+                        <p class="text-muted f-18 col-10 mb-4">
+                            Доступны консультации по телефону и онлайн: можно задать вопрос на сайте, написать
+                            в WhatsApp или на электронную почту.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% comment %}
+<!--<section class="mb-5">-->
+<!--    <div class="container">-->
+<!--        <div class="row align-items-center">-->
+<!--            <div class="col-8 col-xl-6">-->
+<!--                <h2 class="mb-0 py-5">-->
+<!--                    Специалисты центра-->
+<!--                </h2>-->
+<!--            </div>-->
+<!--            <div class="col-4 col-xl-6 text-right">-->
+<!--                <a href="#" class="text-body">-->
+<!--                    Смотреть все-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card card-box-shadow">-->
+<!--            <div class="row align-items-center py-5">-->
+<!--                <div class="col-12 col-xl-3">-->
+<!--                    <div class="text-center">-->
+<!--                        <img src="{% static 'images/doc/user_1.png' %}" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="nav mt-4 justify-content-center">-->
+<!--                        <div class="nav-item px-2">-->
+<!--                            <div class="nav-lin">-->
+<!--                                <a href="#" class="text-body">-->
+<!--                                    <img src="{% static 'images/network/Telegram.svg' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="nav-item px-2">-->
+<!--                            <div class="nav-lin">-->
+<!--                                <a href="#" class="text-body">-->
+<!--                                    <img src="{% static 'images/network/Vkontakte.svg' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="nav-item px-2">-->
+<!--                            <div class="nav-lin">-->
+<!--                                <a href="#" class="text-body">-->
+<!--                                    <img src="{% static 'images/network/Mail.svg' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="nav-item px-2">-->
+<!--                            <div class="nav-lin">-->
+<!--                                <a href="#" class="text-body">-->
+<!--                                    <img src="{% static 'images/network/WhatsApp.svg' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-12 col-xl-9">-->
+<!--                    <div class="p-3 p-lg-0">-->
+<!--                        <h4>-->
+<!--                            Хайдарова Гавхар Саидахматовна-->
+<!--                        </h4>-->
+<!--                        <p class="text-muted">-->
+<!--                            Сурдолог-->
+<!--                        </p>-->
+<!--                        <p>-->
+<!--                            Стаж работы: 17 лет-->
+<!--                        </p>-->
+<!--                        <p class="text-muted">-->
+<!--                            Главный врач клиники-->
+<!--                            Кандидат медицинских наук. Заслуженный работник Здравоохранения РУз. Врач высшей категории.-->
+<!--                            Международный сертификат.-->
+<!--                            Сурдолог, наряду с врачами смежных специальностей, помогает клиентам Центров хорошего слуха-->
+<!--                            «Радуга звуков» своевременно выявить нарушение слуха, подобрать необходимые лекарственные-->
+<!--                            препараты и назначить оптимальный курс терапии.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+{% endcomment %}
+<section class="mb-5">
+    <div class="container">
+        <div class="card">
+            <div class="row">
+                <div class="col-12 col-xl-7">
+                    <div class="card-body py-4">
+                        <h2 class="mb-3 pl-5 service-title">
+                            Неважно, какой вы выбрали слуховой аппарат и выбрали ли вообще.
+                            Для нас важны все!
+                        </h2>
+                        <p class="text-muted f-18 pl-5">
+                            Выбор и программирование слухового аппарата — важная
+                            и ответственная задача, поэтому мы заботимся о том, чтобы постоянно повышать свой уровень.
+                            Для этого наши специалисты совершенствуют знания и навыки, обучаются новым методам работы, в
+                            том числе вместе с зарубежными коллегами
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-5">
+                    <img src="{% static 'images/user_and_product.png' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="target" class="mb-5 contacts">
+    <div class="container">
+        <div class="bg-effect">
+            <div class="row justify-content-between align-items-end">
+                <div class="col-12 mb-5 mb-xl-0 col-xl-6">
+                    <h1 class="text-white">
+                        Запись <br/>
+                        на приём
+                    </h1>
+                    <p class="f-25 text-white w-75 mt-4">
+                        После отправки формы
+                        с вами свяжется наш специалист и подтвердит запись
+                    </p>
+                </div>
+                <div class="col-12 mb-5 mb-xl-0 col-xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="name">Имя</label>
+                                    <input id="name" name="name" type="text" class="form-control"
+                                           placeholder="Введите Имя">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input id="phone" name="phone" type="tel" class="form-control"
+                                           placeholder="Введите Телефон" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">Текст</label>
+                                    <input id='text' name="message" type="text" class="form-control"
+                                           placeholder="Введите текст">
+                                </div>
+                                <div class="form-group mt-4 pt-3">
+                                    <button type="submit" class="btn btn-success btn-block">
+                                        Записаться на приём
+                                    </button>
+                                </div>
+                                <p class="small text-center">
+                                    Отправляя данные, вы даёте согласие
+                                    на
+                                    <a href="#" class="text-success">обработку ваших персональных данных</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-4">
+    <div class="container">
+        <div class="border-bottom py-5 px-3" style="border-color:#D7D7D7!important;">
+            <div class="row align-items-center">
+                <div class="col-12 mb-3 mb-xl-0 col-md-12 col-xl-4">
+                    <ul class="nav justify-content-center justify-content-lg-start">
+                        <li class="mr-2 nav-item">
+                            <a href="https://www.facebook.com/radugazvukovuz/?ref=page_internal">
+                                <img src="{% static 'images/facebook.png' %}" width="24" height="24" alt="">
+                            </a>
+                        </li>
+                        <li class="mr-2 nav-item">
+                            <a href="https://www.instagram.com/radugazvukovuz/">
+                                <img src="{% static 'images/instagram.png' %}" width="24" height="24" alt="">
+                            </a>
+                        </li>
+                        <li class="mr-2 nav-item">
+                            <a href="https://t.me/radugazvukovuz">
+                                <img src="{% static 'images/Telegram.svg' %}" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 col-xl-4 text-center">
+                    <div class="d-flex">
+                        <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt=""/>
+                        <a href="tel:+998998404536" class="text-body">
+                            <strong>
+                                (+998 99) 840-45-36
+                            </strong>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-xl-4 text-right">
+                    <a href="#target" class="btn btn-outline-dark">
+                        Мы вам перезвоним!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

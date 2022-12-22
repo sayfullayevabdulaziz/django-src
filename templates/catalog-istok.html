@@ -1,519 +1,269 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<section class="banner mb-2">
+    <div class="container container-sm container-md container-lg container-xl">
+        <div class="row mt-4">
+            <p class="text-size ml-3">Слуховые аппараты Ташкент. Тестирование слуха</p>
+        </div>
+        <br>
+        <div class="row  d-flex">
 
-<section class="mt-5">
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <span class="props-name ml-2 mt-3 "><b>Адрес:</b></span>
+                <div class="props-value ml-2 mb-3">Ташкент, Яккасарайский район, улица Бабура 40 В</div>
+
+            </div>
+            <br>
+
+            <div class="col-md-3 col-sm-3 col-xs-12 ">
+                <span class="props-name ml-5 mt-3"><b>Часы работы:</b></span>
+                <div class="props-value ml-5 mb-3">Пн.–Пт. с 9:00 до 17:00<br>Сб. с 9:00 до 14:00<br>Вс. — выходной
+                </div>
+
+            </div>
+            <br>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <span class="props-name ml-5 mt-3"><b>Телефон:</b></span>
+                <div class="props-value ml-5 ">(+998 99) 8404536<br><sub>Предварительная запись</sub></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="custom-map">
     <div class="container">
+        <div class="bg-effect">
+            <iframe class="iframe-idi"
+            src="https://yandex.com/map-widget/v1/?um=constructor%3A577adf8c6a79892a98bee1600d836399f8aea0a8c89ba2667c12de3fab4119a6&amp;source=constructor"
+            width="100%" height="599"></iframe>
+            <div class="row justify-content-between align-items-end">
+                <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="mb-1">
+    <div class="container">
+        <h2 class="m-0 py-5">Наш центр</h2>
         <div class="row">
-            <div class="col-12 col-xl-9 mb-4">
-                <form action="#">
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text pr-0 pl-4">
-                                <img src="{% static 'images/icons/search.svg' %}" alt="Search icon">
-                            </div>
+            <div class="col-12 col-xl-6 mb-4-5">
+                <div>
+                    <img src="{% static 'images/center/1.png' %}" class="img-fluid rounded" alt="">
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6 col-xl-6">
+                        <div>
+                            <img src="{% static 'images/center/2.png' %}" class="img-fluid rounded" alt="">
                         </div>
-                        <input type="text" class="form-control" placeholder="Поиск">
                     </div>
-                </form>
+                    <div class="col-6 col-xl-6">
+                        <div>
+                            <img src="{% static 'images/center/3.png' %}" class="img-fluid rounded" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-xl-12">
-                <form action="#">
-                    <div class="row align-items-center">
-                        <div class="mb-3 mb-xl-0 col-4 col-xl-auto text-center text-xl-left">
-                            <img src="{% static 'images/icons/filter.svg' %}" alt="Icon filter">
-                        </div>
-                        <div class="mb-3 mb-xl-0 col-4 col-xl-auto">
-                            <div class="dropdown">
-                                <button type="button" class="btn" id="salesButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                    Цена <img src="{% static 'images/icons/toggle.svg' %}" alt="toggler icon">
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="salesButton">
-                                    <button type="button" class="dropdown-item">Недорогие</button>
-                                    <button type="button" class="dropdown-item">Бизнес</button>
-                                    <button type="button" class="dropdown-item">Премиум</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3 mb-xl-0 col-4 col-xl-auto">
-                            <div class="dropdown">
-                                <button type="button" class="btn" id="brandButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                    Бренд <img src="{% static 'images/icons/toggle.svg' %}" alt="toggler icon">
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="brandButton">
-                                    <button type="button" class="dropdown-item">Руна</button>
-                                    <button type="button" class="dropdown-item">Audeo</button>
-                                    <button type="button" class="dropdown-item">Соната</button>
-                                    <button type="button" class="dropdown-item">Багира</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3 mb-xl-0 col-4 col-xl-auto">
-                            <div class="dropdown">
-                                <button type="button" class="btn" id="typeButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                    Тип корпуса <img src="{% static 'images/icons/toggle.svg' %}" alt="toggler icon">
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="typeButton">
-                                    <button type="button" class="dropdown-item">Заушные</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3 mb-xl-0 col-4 col-xl-auto">
-                            <div class="dropdown">
-                                <button type="button" class="btn" id="powerButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                    Тип обработки звука <img src="{% static 'images/icons/toggle.svg' %}" alt="toggler icon">
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="powerButton">
-                                    <button type="button" class="dropdown-item">Аналоговые</button>
-                                    <button type="button" class="dropdown-item">Цифровые</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3 mb-xl-0 col-4 col-xl-auto">
-                            <div class="dropdown">
-                                <button type="button" class="btn" id="specialButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                    Особенное <img src="{% static 'images/icons/toggle.svg' %}" alt="toggler icon">
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="specialButton">
-                                    <button type="button" class="dropdown-item">С заряткой</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+            <div class="col-12 col-xl-6 mb-4-5">
+                <img src="{% static 'images/center/4.png' %}" class="img-fluid" alt="">
             </div>
         </div>
     </div>
 </section>
-<section class="mb-5 product-cards">
+
+
+<section class="mb-5">
     <div class="container">
-        <h2 class="mb-0 py-4">
-            Слуховые аппараты
-        </h2>
+        <h2 class="m-0 py-5">Наш специалист</h2>
+        <div class="card">
             <div class="row">
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_8.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Багира Pro-01">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Багира Pro-01
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            34 900 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="{% url 'product' %}" class="btn btn-dark btn-block border-0">
-                            Подробный
-                        </a>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_5.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Audeo М30-13Т">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Руна 12 IS
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            23 000 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                    <div class="card-img-overlay">
-                        <span class="btn btn-outline-info btn-sm">
-                            Новинка
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_4.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Audeo М30-13Т">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Audeo М30-312
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            59 900 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_6.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Соната У-12">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Соната У-12
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            10 900 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <div class="col-12 col-xl-7">
+                    <div class="card-body py-4">
 
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_7.png' %}" class="img-fluid" alt="Слуховой аппарат Руна 12 M">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Руна 12 M
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            28 500 руб.
+                        <h2 class="mb-3 pl-3 service-title">
+                            Назарова Мария Рустамовна: акустик, специалист центра
+                        </h2>
+                        <p class="text-muted f-18 pl-3">
+                            Прошла основное обучение по основам аудиологии и акустики, а также по программированию
+                            современных слуховых аппаратов и снятию слепков уха для изготовления индивидуальных
+                            вкладышей и внутриушных слуховых аппаратов в обучающем центре на базе ГК «Исток-Аудио».
+                            <span class="d-block mt-3">
+                                 Регулярно повышает свою квалификацию и посещает учебные семинары, которые ГК «Исток-Аудио» проводит совместно с крупнейшими производителями слуховых аппаратов.
+                         </span>
                         </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                    <div class="card-img-overlay">
-                        <span class="btn btn-outline-info btn-sm">
-                            Новинка
-                        </span>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_4.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Audeo М30-312Т">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Audeo М30-312Т
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            59 900 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            Нет в наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
+                <div class="col-12 col-xl-5">
+                    <img src="{% static 'images/doc/maria.png' %}" class="img-fluid w-100 h-100" alt="">
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="images/products/product_4.png" class="img-fluid"
-                                 alt="Слуховой аппарат Audeo М30-13Т">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Audeo М30-13Т
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            59 900 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="{% url 'product' %}" class="btn btn-dark btn-block border-0">
-                            Подробный
-                        </a>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_9.png' %}" class="img-fluid" alt="Слуховой аппарат XTM S P6">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат XTM S P6
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            38 000 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_6.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Соната У-13">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Соната У-13
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            10 900 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_4.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Audeo М30-R">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Audeo М30-R
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            65 000 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_10.png' %}" class="img-fluid" alt="Слуховой аппарат XTM М P6">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат XTM М P6
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            38 000 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            Нет в наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_6.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Соната У-12">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Соната У-12
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            10 900 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_5.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Руна 12 IM">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Руна 12 IM
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            23 000 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                    <div class="card-img-overlay">
-                        <span class="btn btn-outline-info btn-sm">
-                            Новинка
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_11.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат LiNX Quattro RE588-DWT">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат LiNX Quattro RE588-DWT
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            65 000 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                    <div class="card-img-overlay">
-                        <span class="btn btn-outline-info btn-sm">
-                            Новинка
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_11.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат LiNX Quattro RE988-DWT">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат LiNX Quattro RE988-DWT
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            179 000 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                    <div class="card-img-overlay">
-                        <span class="btn btn-outline-info btn-sm">
-                            Новинка
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-xl-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="{% static 'images/products/product_4.png' %}" class="img-fluid"
-                                 alt="Слуховой аппарат Audeo М50-13Т">
-                        </div>
-                        <h4 class="my-4 f-22">
-                            Слуховой аппарат Audeo М50-13Т
-                        </h4>
-                        <p class="text-info f-22 mb-0">
-                            89 000 руб.
-                        </p>
-                        <p class="text-muted mb-4">
-                            В наличии
-                        </p>
-                        <a href="#" class="btn btn-outline-dark btn-block">
-                            Заказать
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12">
-                <ul class="pagination mt-5 justify-content-center">
-                    <li class="page-item">
-                        <a href="#" class="page-link">
-                            <img src="{% static 'images/icons/prev.svg' %}"/>
-                        </a>
-                    </li>
-                    <li class="page-item active">
-                        <a href="#" class="page-link">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a href="#" class="page-link">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a href="#" class="page-link">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a href="#" class="page-link">4</a>
-                    </li>
-                    <li class="page-item">
-                        <a href="#" class="page-link">5</a>
-                    </li>
-                    <li class="page-item">
-                        <a href="#" class="page-link">
-                            <img src="{% static 'images/icons/next.svg' %}"/>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<section class="mb-5 contacts">
+<section class="mb-5">
+    <div class="container">
+        <h2 class="mb-0 py-5">
+            Почему выбирают Центр хорошего слуха «Радуга звуков»
+        </h2>
+        <div class="row">
+            <div class="mb-3 mb-xl-0 col-12 col-xl-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="{% static 'images/impulce.svg' %}" class="img-fluid mb-4" alt="">
+                        <h4 class="my-4">
+                            Комфорт
+                        </h4>
+                        <p class="text-muted f-18 col-10 mb-4">
+                            В центре хорошего слуха мы создаём комфортную и светлую обстановку, чтобы до и во время
+                            приёма человек чувствовал себя уверенно и спокойно.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 mb-xl-0 col-12 col-xl-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="{% static 'images/heart_save.svg' %}" class="img-fluid mb-4" alt="">
+                        <h4 class="my-4">
+                            Забота
+                        </h4>
+                        <p class="text-muted f-18 col-10 mb-4">
+                            Наши специалисты думают прежде всего о том, как помочь, а не быстрее закончить приём.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 mb-xl-0 col-12 col-xl-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <img src="{% static 'images/tel.svg' %}" class="img-fluid mb-4" alt="">
+                        <h4 class="my-4">
+                            Поддержка
+                        </h4>
+                        <p class="text-muted f-18 col-10 mb-4">
+                            Доступны консультации по телефону и онлайн: можно задать вопрос на сайте, написать
+                            в WhatsApp или на электронную почту.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% comment %}
+<!--<section class="mb-5">-->
+<!--    <div class="container">-->
+<!--        <div class="row align-items-center">-->
+<!--            <div class="col-8 col-xl-6">-->
+<!--                <h2 class="mb-0 py-5">-->
+<!--                    Специалисты центра-->
+<!--                </h2>-->
+<!--            </div>-->
+<!--            <div class="col-4 col-xl-6 text-right">-->
+<!--                <a href="#" class="text-body">-->
+<!--                    Смотреть все-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card card-box-shadow">-->
+<!--            <div class="row align-items-center py-5">-->
+<!--                <div class="col-12 col-xl-3">-->
+<!--                    <div class="text-center">-->
+<!--                        <img src="{% static 'images/doc/user_1.png' %}" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="nav mt-4 justify-content-center">-->
+<!--                        <div class="nav-item px-2">-->
+<!--                            <div class="nav-lin">-->
+<!--                                <a href="#" class="text-body">-->
+<!--                                    <img src="{% static 'images/network/Telegram.svg' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="nav-item px-2">-->
+<!--                            <div class="nav-lin">-->
+<!--                                <a href="#" class="text-body">-->
+<!--                                    <img src="{% static 'images/network/Vkontakte.svg' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="nav-item px-2">-->
+<!--                            <div class="nav-lin">-->
+<!--                                <a href="#" class="text-body">-->
+<!--                                    <img src="{% static 'images/network/Mail.svg' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="nav-item px-2">-->
+<!--                            <div class="nav-lin">-->
+<!--                                <a href="#" class="text-body">-->
+<!--                                    <img src="{% static 'images/network/WhatsApp.svg' %}" alt="">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-12 col-xl-9">-->
+<!--                    <div class="p-3 p-lg-0">-->
+<!--                        <h4>-->
+<!--                            Хайдарова Гавхар Саидахматовна-->
+<!--                        </h4>-->
+<!--                        <p class="text-muted">-->
+<!--                            Сурдолог-->
+<!--                        </p>-->
+<!--                        <p>-->
+<!--                            Стаж работы: 17 лет-->
+<!--                        </p>-->
+<!--                        <p class="text-muted">-->
+<!--                            Главный врач клиники-->
+<!--                            Кандидат медицинских наук. Заслуженный работник Здравоохранения РУз. Врач высшей категории.-->
+<!--                            Международный сертификат.-->
+<!--                            Сурдолог, наряду с врачами смежных специальностей, помогает клиентам Центров хорошего слуха-->
+<!--                            «Радуга звуков» своевременно выявить нарушение слуха, подобрать необходимые лекарственные-->
+<!--                            препараты и назначить оптимальный курс терапии.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+{% endcomment %}
+<section class="mb-5">
+    <div class="container">
+        <div class="card">
+            <div class="row">
+                <div class="col-12 col-xl-7">
+                    <div class="card-body py-4">
+                        <h2 class="mb-3 pl-5 service-title">
+                            Неважно, какой вы выбрали слуховой аппарат и выбрали ли вообще.
+                            Для нас важны все!
+                        </h2>
+                        <p class="text-muted f-18 pl-5">
+                            Выбор и программирование слухового аппарата — важная
+                            и ответственная задача, поэтому мы заботимся о том, чтобы постоянно повышать свой уровень.
+                            Для этого наши специалисты совершенствуют знания и навыки, обучаются новым методам работы, в
+                            том числе вместе с зарубежными коллегами
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-5">
+                    <img src="{% static 'images/user_and_product.png' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="target" class="mb-5 contacts">
     <div class="container">
         <div class="bg-effect">
             <div class="row justify-content-between align-items-end">
@@ -534,15 +284,18 @@
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <label for="name">Имя</label>
-                                    <input id="name" name="name" type="text" class="form-control" placeholder="Введите Имя">
+                                    <input id="name" name="name" type="text" class="form-control"
+                                           placeholder="Введите Имя">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Телефон</label>
-                                    <input id="phone" name="phone" type="tel" class="form-control" placeholder="Введите Телефон" required>
+                                    <input id="phone" name="phone" type="tel" class="form-control"
+                                           placeholder="Введите Телефон" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="text">Текст</label>
-                                    <input id='text' name="message" type="text" class="form-control" placeholder="Введите текст">
+                                    <input id='text' name="message" type="text" class="form-control"
+                                           placeholder="Введите текст">
                                 </div>
                                 <div class="form-group mt-4 pt-3">
                                     <button type="submit" class="btn btn-success btn-block">
@@ -562,43 +315,7 @@
         </div>
     </div>
 </section>
-<section class="map">
-    <div class="container">
-        <div class="bg-effect">
-            <div class="row justify-content-between align-items-end">
-                <div class="mb-4 mb-xl-0 col-12 col-xl-4"></div>
-                <div class="mb-4 mb-xl-0 col-12 col-xl-4">
-                    <div class="">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="small mb-3">Адрес</div>
-                                <p class="mb-4">
-                                    Ташкент, Яккасарайский район, улица Бабура 40 В
-                                </p>
-                                <div class="small mb-3">Часы работы</div>
-                                <div>
-                                    <strong>Пн.–Пт.</strong> с 9:00 до 17:00
-                                </div>
-                                <div>
-                                    <strong>Сб.</strong> с 9:00 до 14:00
-                                </div>
-                                <div class="mb-4">
-                                    <strong>Вс.</strong> — выходной
-                                </div>
-                                <div class="small mb-3">Телефон</div>
-                                <div class="d-flex">
-                                    <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
-                                    <a href="tel:+998998404536" class="text-body">(+998 99) 840-45-36</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
-</section>
 <section class="mt-4">
     <div class="container">
         <div class="border-bottom py-5 px-3" style="border-color:#D7D7D7!important;">
@@ -624,7 +341,7 @@
                 </div>
                 <div class="col-6 col-md-6 col-xl-4 text-center">
                     <div class="d-flex">
-                        <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt="" />
+                        <img class="mr-2" src="{% static 'images/icons/phone.svg' %}" alt=""/>
                         <a href="tel:+998998404536" class="text-body">
                             <strong>
                                 (+998 99) 840-45-36
@@ -633,7 +350,7 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-xl-4 text-right">
-                    <a href="#" class="btn btn-outline-dark">
+                    <a href="#target" class="btn btn-outline-dark">
                         Мы вам перезвоним!
                     </a>
                 </div>
@@ -641,5 +358,4 @@
         </div>
     </div>
 </section>
-
 {% endblock content %}

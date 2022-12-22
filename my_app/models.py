@@ -31,8 +31,17 @@ class Product(models.Model):
 
 
 class Technique(models.Model):
-    name = models.CharField(max_length=300)
-    age = models.CharField(max_length=200, null=True, blank=True)
+    name = models.CharField(max_length=200, verbose_name="Производитель", null=True, blank=True)
+    type_corpuse = models.CharField(max_length=200, verbose_name="Тип корпуса", null=True, blank=True)
+    power_level = models.CharField(max_length=200, verbose_name="Уровень мощности", null=True, blank=True)
+    type_signal = models.CharField(max_length=200, verbose_name="Тип обработки сигнала", null=True, blank=True)
+    count_channel = models.CharField(max_length=200, verbose_name="Количество каналов", null=True, blank=True)
+    max_usilenie = models.CharField(max_length=200, verbose_name="Максимальное акустическое усиление*, (дБ)", null=True, blank=True)
+    max_vuzd = models.CharField(max_length=200, verbose_name="Максимальное акустическое усиление*, (дБ)", null=True, blank=True)
+    battery = models.CharField(max_length=200, verbose_name="Батарейка", null=True, blank=True)
+    count_programm = models.CharField(max_length=200, verbose_name="Количество программ прослушивания", null=True, blank=True)
+
+
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def __str__(self):

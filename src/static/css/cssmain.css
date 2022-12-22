@@ -776,3 +776,21 @@ nav .modal .list-unstyled a:hover{
     height: 700px;
     border-top: black 1xp solid;
 }
+.dropdown-toggle::after{
+display:none !important;
+}
+@media (max-width: 992px) {
+    .display-desctop{
+        display: none;
+    }
+}
+.dropdown-toggle{
+    margin-left: 5px;
+}
+@media (min-width: 1200px) {
+.dropdown-toggle{
+    margin-left: 30px;
+}
+}
+
+
